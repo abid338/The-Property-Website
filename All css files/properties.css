@@ -1,0 +1,430 @@
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        .featured-section {
+            padding: 60px 20px;
+            background: #ffffff;
+        }
+
+        .featured-section h2 {
+            font-size: clamp(24px, 4vw, 32px);
+            margin-bottom: 10px;
+            text-align: center;
+            color: #2d3748;
+            font-weight: 700;
+        }
+
+        .featured-section > p {
+            color: #718096;
+            font-size: clamp(14px, 2vw, 16px);
+            margin-bottom: 40px;
+            text-align: center;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .featured-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 24px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* Left big card */
+        .property-card {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .property-image {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .property-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .top-badges {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            display: flex;
+            gap: 8px;
+            z-index: 2;
+        }
+
+        .top-badges span {
+            background: #3182ce;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 6px 12px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .top-badges span:first-child {
+            background: #3182ce;
+        }
+
+        .top-badges span:nth-child(2) {
+            background: #2b6cb0;
+        }
+
+        .bottom-badges {
+            position: absolute;
+            bottom: 16px;
+            left: 16px;
+            display: flex;
+            gap: 8px;
+            z-index: 2;
+        }
+
+        .bottom-badges span {
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 6px 12px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            backdrop-filter: blur(10px);
+        }
+
+        .property-content {
+            padding: 24px;
+            background: #fff;
+        }
+
+        .property-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+            gap: 16px;
+        }
+
+        .property-header h3 {
+            font-size: clamp(20px, 3vw, 28px);
+            color: #2d3748;
+            font-weight: 700;
+            flex: 1;
+        }
+
+        .property-header .price {
+            font-size: clamp(18px, 3vw, 24px);
+            color: #2d5a87;
+            font-weight: 800;
+            background: #e6f3ff;
+            padding: 8px 16px;
+            border-radius: 8px;
+        }
+
+        .property-location {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 12px;
+            color: #718096;
+            font-size: 14px;
+        }
+
+        .property-location i {
+            color: #2d5a87;
+            font-size: 14px;
+        }
+
+        .property-content p {
+            font-size: 14px;
+            margin-bottom: 20px;
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
+        .property-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .property-buttons button {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            flex: 1;
+            min-width: 140px;
+        }
+
+        .property-buttons .visit {
+            background: #2d5a87;
+            color: #fff;
+        }
+
+        .property-buttons .visit:hover {
+            background: #2c5282;
+            transform: translateY(-2px);
+        }
+
+        .property-buttons .photos {
+            background: transparent;
+            color: #2d5a87;
+            border: 2px solid #2d5a87;
+        }
+
+        .property-buttons .photos:hover {
+            background: #2d5a87;
+            color: #fff;
+        }
+
+
+
+        /* Right side small cards */
+        .right-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            height: 100%;
+        }
+
+        .small-card {
+            display: flex;
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            flex: 1;
+            min-height: 160px;
+        }
+
+        .small-card:hover {
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .small-card .img-box {
+            position: relative;
+            width: 140px;
+            height: 100%;
+            flex-shrink: 0;
+        }
+
+        .small-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .small-card .badge {
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            font-size: 10px;
+            font-weight: 600;
+            padding: 4px 8px;
+            border-radius: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 3px;
+        }
+
+        .hot-badge {
+            background: #4a5568;
+            color: #fff;
+        }
+
+        .new-badge {
+            background: #38a169;
+            color: #fff;
+        }
+
+        .featured-badge {
+            background: #3182ce;
+            color: #fff;
+        }
+
+        .small-card .content {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 160px;
+        }
+
+        .small-card h4 {
+            font-size: 16px;
+            color: #2d3748;
+            font-weight: 700;
+            margin-bottom: 6px;
+            line-height: 1.3;
+        }
+
+        .small-card .location {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 12px;
+            color: #718096;
+            margin-bottom: 8px;
+        }
+
+        .small-card .location i {
+            color: #a0aec0;
+            font-size: 12px;
+        }
+
+        .small-card .details {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 12px;
+            color: #718096;
+            margin-bottom: 12px;
+        }
+
+        .small-detail-item {
+            display: flex;
+            align-items: center;
+            gap: 3px;
+            font-weight: 500;
+        }
+
+        .small-detail-item i {
+            color: #a0aec0;
+            font-size: 12px;
+        }
+
+        .small-card .price-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .small-card .price {
+            font-size: 16px;
+            color: #2d3748;
+            font-weight: 800;
+        }
+
+        .small-card button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 20px;
+            background: #2d5a87;
+            color: #fff;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+        }
+
+        .small-card button:hover {
+            background: #2c5282;
+            transform: translateY(-1px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .featured-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+            
+            .property-image {
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .featured-section {
+                padding: 40px 16px;
+            }
+
+            .property-image {
+                height: 250px;
+            }
+
+            .property-content {
+                padding: 30px 20px 20px;
+            }
+
+            .bottom-badges {
+                flex-wrap: wrap;
+                max-width: calc(100% - 140px);
+            }
+
+            .small-card {
+                flex-direction: row;
+            }
+
+            .small-card .img-box {
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .small-card {
+                flex-direction: column;
+            }
+
+            .small-card .img-box {
+                width: 100%;
+                height: 160px;
+            }
+
+            .bottom-badges {
+                bottom: 12px;
+                left: 12px;
+                gap: 6px;
+            }
+
+            .bottom-badges span {
+                font-size: 11px;
+                padding: 4px 8px;
+            }
+
+            .property-price {
+                top: 16px;
+                right: 16px;
+                font-size: 18px;
+                padding: 10px 16px;
+            }
+        }
+
+        /* Hover Effects */
+        .property-card:hover .property-image img {
+            transform: scale(1.02);
+            transition: transform 0.6s ease;
+        }
+
+        .small-card:hover img {
+            transform: scale(1.05);
+            transition: transform 0.4s ease;
+        }

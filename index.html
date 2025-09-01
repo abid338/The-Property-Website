@@ -1,0 +1,1624 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome CDN (latest v6.5.0) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <title>The Property</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        /* Header section styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 50px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo-section h1 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #2c3e50;
+            letter-spacing: -0.5px;
+        }
+
+        .navlinks {
+            display: flex;
+            list-style: none;
+            align-items: center;
+            gap: 35px;
+            margin: 0;
+        }
+
+        .navlinks li {
+            position: relative;
+        }
+
+        .navlinks a {
+            text-decoration: none;
+            color: #6c757d;
+            font-size: 15px;
+            font-weight: 500;
+            padding: 10px 0;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .navlinks a:hover {
+            color: #4a9b8e;
+        }
+
+        .navlinks a[href="index.hml"] {
+            color: #4a9b8e;
+            font-weight: 600;
+        }
+
+        .navlinks a[href="more pages.html"]:after,
+        .navlinks a[href="dropdown.html"]:after {
+            content: "▼";
+            font-size: 10px;
+            margin-left: 5px;
+            color: #6c757d;
+        }
+
+        .button button {
+            background-color: #4a9b8e;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .button button:hover {
+            background-color: #3d8278;
+            transform: translateY(-1px);
+        }
+
+        /* Mobile menu toggle */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #2c3e50;
+            cursor: pointer;
+        }
+
+        /* Hero section */
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 40px;
+            padding: 60px 50px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .hero-left {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hero-left button {
+            background: #4a9b8e;
+            color: #fff;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            align-self: flex-start;
+        }
+
+        .hero-left h1 {
+            font-size: 60px;
+            color: #2c3e50;
+            font-weight: 700;
+            margin-bottom: 25px;
+            line-height: 1.2;
+        }
+
+        .hero-left p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 25px;
+            color: #555;
+        }
+
+        .search-box {
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .search-box input,
+        .search-box select,
+        .search-box button {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        .search-box .row {
+            display: flex;
+            gap: 10px;
+        }
+
+        .search-box .row input,
+        .search-box .row select {
+            flex: 1;
+        }
+
+        .search-box button {
+            background: #4a9b8e;
+            color: #fff;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .search-box button:hover {
+            background: #57bbaa;
+        }
+
+
+
+        .hero-right {
+            flex: 1;
+            position: relative;
+        }
+
+        .hero-right img.main-img {
+            width: 100%;
+            height: 500px;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            object-fit: cover;
+        }
+
+        .hero-right img.small {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 5px solid white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .top-left {
+            top: -30px;
+            left: 30px;
+        }
+
+
+
+
+
+        /* About section */
+        .about-section {
+            padding: 80px 50px;
+            background: #f8f9fa;
+        }
+
+        .about-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .left-content {
+            padding-right: 20px;
+        }
+
+        .premium-badge {
+            display: inline-flex;
+            align-items: center;
+            background-color: #4a9b8e;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            gap: 8px;
+        }
+
+        .premium-badge::before {
+            content: "🏠";
+            font-size: 16px;
+        }
+
+        .main-heading {
+            font-size: 48px;
+            font-weight: 700;
+            color: #2c3e50;
+            line-height: 1.2;
+            margin-bottom: 25px;
+        }
+
+        .description {
+            color: #6c757d;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            max-width: 500px;
+        }
+
+        .stats-cards {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .stats-cards .card {
+            flex: 1;
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .stats-cards .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stats-cards .card h2 {
+            font-size: 28px;
+            color: #4a9b8e;
+            margin-bottom: 4px;
+        }
+
+        .stats-cards .card p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .features-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            font-size: 16px;
+            color: #495057;
+            font-weight: 500;
+        }
+
+        .checkmark {
+            width: 24px;
+            height: 24px;
+            background-color: #4a9b8e;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .checkmark::after {
+            content: "✓";
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .bottom-section {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .learn-more-btn {
+            background-color: #4a9b8e;
+            color: white;
+            border: none;
+            padding: 18px 35px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(74, 155, 142, 0.2);
+        }
+
+        .learn-more-btn:hover {
+            background-color: #3d8278;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(74, 155, 142, 0.3);
+        }
+
+        .learn-more-btn::after {
+            content: "→";
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .phone-icon {
+            width: 45px;
+            height: 45px;
+            background-color: #e3f2fd;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .phone-icon::after {
+            content: "🎧";
+            font-size: 18px;
+        }
+
+        .contact-details {
+            text-align: left;
+        }
+
+        .contact-text {
+            color: #6c757d;
+            font-size: 14px;
+            margin-bottom: 4px;
+            font-weight: 500;
+        }
+
+        .phone-number {
+            color: #2c3e50;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .right-content {
+            position: relative;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 15px;
+            height: 400px;
+        }
+
+        
+
+        .award-badge {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            background-color: white;
+            padding: 15px 20px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .award-icon {
+            width: 40px;
+            height: 40px;
+            background-color: #4a9b8e;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .award-info {
+            text-align: left;
+        }
+
+        .award-number {
+            font-size: 20px;
+            font-weight: 700;
+            color: #2c3e50;
+            line-height: 1;
+        }
+
+        .award-label {
+            font-size: 13px;
+            color: #6c757d;
+            font-weight: 500;
+        }
+        .about-image img {
+            width: 600px;
+            height: 550px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+       
+        /* Featured Section */
+        .featured-section {
+            padding: 80px 50px;
+            background: #ffffff;
+        }
+
+        .featured-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .featured-section h2 {
+            font-size: clamp(28px, 4vw, 40px);
+            margin-bottom: 15px;
+            text-align: center;
+            color: #2d3748;
+            font-weight: 700;
+        }
+
+        .featured-section>p {
+            color: #718096;
+            font-size: clamp(14px, 2vw, 18px);
+            margin-bottom: 50px;
+            text-align: center;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .featured-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        /* Main featured card */
+        .property-card {
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .property-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .property-image {
+            position: relative;
+            height: 350px;
+            overflow: hidden;
+        }
+
+        .property-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .property-card:hover .property-image img {
+            transform: scale(1.05);
+        }
+
+        .top-badges {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            gap: 10px;
+            z-index: 2;
+        }
+
+        .top-badges span {
+            background: #3182ce;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 8px 15px;
+            border-radius: 25px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .top-badges span:nth-child(2) {
+            background: #2b6cb0;
+        }
+
+        .bottom-badges {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            display: flex;
+            gap: 10px;
+            z-index: 2;
+        }
+
+        .bottom-badges span {
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 8px 15px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            backdrop-filter: blur(10px);
+        }
+
+        .property-content {
+            padding: 30px;
+            background: #fff;
+        }
+
+        .property-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            gap: 20px;
+        }
+
+        .property-header h3 {
+            font-size: clamp(20px, 3vw, 28px);
+            color: #2d3748;
+            font-weight: 700;
+            flex: 1;
+        }
+
+        .property-header .price {
+            font-size: clamp(18px, 3vw, 24px);
+            color: #2d5a87;
+            font-weight: 800;
+            background: #e6f3ff;
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+
+        .property-location {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 15px;
+            color: #718096;
+            font-size: 16px;
+        }
+
+        .property-location i {
+            color: #2d5a87;
+            font-size: 16px;
+        }
+
+        .property-content p {
+            font-size: 16px;
+            margin-bottom: 25px;
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
+        .property-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .property-buttons button {
+            background-color: #4a9b8e;
+            color: white;
+            padding: clamp(10px, 2vw, 12px) clamp(20px, 4vw, 30px);
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: clamp(14px, 2.5vw, 16px);
+        }
+
+        .property-buttons .photos {
+            background: transparent;
+            color: #4a9b8e;
+            ;
+            border: 2px solid #2d5a87;
+        }
+
+        .property-buttons .photos:hover {
+            background: #4a9b8e;
+            color: #fff;
+        }
+
+        /* Right side small cards */
+        .right-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            height: 100%;
+        }
+
+        .small-card {
+            display: flex;
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            flex: 1;
+            min-height: 180px;
+        }
+
+        .small-card:hover {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transform: translateY(-3px);
+        }
+
+        .small-card .img-box {
+            position: relative;
+            width: 140px;
+            height: 100%;
+            flex-shrink: 0;
+            overflow: hidden;
+        }
+
+        .small-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .small-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .small-card .badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 5px 10px;
+            border-radius: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .hot-badge {
+            background: #4a5568;
+            color: #fff;
+        }
+
+        .new-badge {
+            background: #38a169;
+            color: #fff;
+        }
+
+        .featured-badge {
+            background: #3182ce;
+            color: #fff;
+        }
+
+        .small-card .content {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .small-card h4 {
+            font-size: 16px;
+            color: #2d3748;
+            font-weight: 700;
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+
+        .small-card .location {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 13px;
+            color: #718096;
+            margin-bottom: 10px;
+        }
+
+        .small-card .location i {
+            color: #a0aec0;
+            font-size: 13px;
+        }
+
+        .small-card .details {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 12px;
+            color: #718096;
+            margin-bottom: 15px;
+        }
+
+        .small-detail-item {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-weight: 500;
+        }
+
+        .small-detail-item i {
+            color: #a0aec0;
+            font-size: 12px;
+        }
+
+        .small-card .price-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .small-card .price {
+            font-size: 16px;
+            color: #2d3748;
+            font-weight: 800;
+        }
+
+        .small-card button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 20px;
+            background: #2d5a87;
+            color: #fff;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+        }
+
+        .small-card button:hover {
+            background: #2c5282;
+            transform: translateY(-1px);
+        }
+
+        /* Additional properties grid */
+        .additional-properties {
+            margin-top: 50px;
+        }
+
+        .additional-properties h3 {
+            font-size: 28px;
+            color: #2d3748;
+            font-weight: 700;
+            /* text-align: center; */
+            margin-bottom: 40px;
+        }
+
+        .properties-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .additional-card {
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .additional-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .additional-card .card-img {
+            position: relative;
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .additional-card .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .additional-card:hover .card-img img {
+            transform: scale(1.1);
+        }
+
+        .additional-card .badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            /* background: #ff4d4d;
+            color: #fff; */
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .additional-card .card-content {
+            padding: 25px;
+        }
+
+        .additional-card .card-content h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #2d3748;
+            font-weight: 700;
+        }
+
+        .additional-card .card-content .location {
+            font-size: 14px;
+            color: #718096;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .additional-card .card-content .details {
+            font-size: 14px;
+            color: #555;
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .additional-card .card-content .details i {
+            margin-right: 5px;
+            color: #a0aec0;
+        }
+
+        .additional-card .card-footer {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .additional-card .card-footer .price {
+            font-size: 22px;
+            font-weight: 800;
+            color: #4a9b8e;
+        }
+
+        .additional-card .card-footer button {
+            background: #4a9b8e;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .additional-card .card-footer button:hover {
+            background: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .navbar {
+                padding: 15px 30px;
+            }
+
+            .navlinks {
+                gap: 25px;
+            }
+
+            .hero {
+                padding: 60px 30px;
+            }
+
+            .about-section {
+                padding: 80px 30px;
+            }
+
+            .featured-section {
+                padding: 80px 30px;
+            }
+
+            .featured-grid {
+                gap: 25px;
+            }
+        }
+
+        @media (max-width: 968px) {
+            .featured-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .property-image {
+                height: 300px;
+            }
+
+            .properties-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 25px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .navlinks {
+                display: none;
+            }
+
+            .navbar {
+                flex-direction: row;
+                padding: 15px 20px;
+            }
+
+            .hero {
+                flex-direction: column;
+                padding: 40px 20px;
+                gap: 40px;
+            }
+
+            .hero-left {
+                text-align: center;
+            }
+
+            .hero-left button {
+                align-self: center;
+            }
+
+            .search-box .row {
+                flex-direction: column;
+            }
+
+            .stats-cards {
+                flex-direction: column;
+            }
+
+            .hero-right img.small {
+                width: 80px;
+                height: 80px;
+            }
+
+            .about-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .left-content {
+                padding-right: 0;
+                text-align: center;
+            }
+
+            .main-heading {
+                font-size: 36px;
+            }
+
+            .stats-container {
+                justify-content: center;
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+
+            .bottom-section {
+                flex-direction: column;
+                align-items: center;
+                gap: 25px;
+            }
+
+            .right-content {
+                grid-template-columns: 1fr;
+                height: 300px;
+            }
+
+            .right-content::after,
+            .right-content::before {
+                display: none;
+            }
+
+            .featured-section {
+                padding: 40px 16px;
+            }
+
+            .property-image {
+                height: 250px;
+            }
+
+            .property-content {
+                padding: 20px;
+            }
+
+            .bottom-badges {
+                flex-wrap: wrap;
+                max-width: calc(100% - 140px);
+            }
+
+            .small-card {
+                flex-direction: row;
+                min-height: 140px;
+            }
+
+            .small-card .img-box {
+                width: 100px;
+            }
+
+            .small-card .content {
+                padding: 15px;
+            }
+
+            .properties-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 30px 15px;
+            }
+
+            .hero-left h1 {
+                font-size: 28px;
+            }
+
+            .search-box {
+                padding: 15px;
+            }
+
+            .stats-cards {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .stats-cards .card {
+                padding: 15px;
+            }
+
+            .small-card {
+                flex-direction: column;
+                min-height: auto;
+            }
+
+            .small-card .img-box {
+                width: 100%;
+                height: 160px;
+            }
+
+            .bottom-badges {
+                bottom: 12px;
+                left: 12px;
+                gap: 6px;
+            }
+
+            .bottom-badges span {
+                font-size: 11px;
+                padding: 6px 10px;
+            }
+
+            .main-heading {
+                font-size: 32px;
+            }
+
+            .features-list li {
+                font-size: 14px;
+            }
+
+            .learn-more-btn {
+                padding: 15px 25px;
+                font-size: 14px;
+            }
+
+            .stats-container {
+                flex-direction: column;
+                gap: 20px;
+                align-items: center;
+                text-align: center;
+            }
+
+            .properties-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .additional-card .card-content {
+                padding: 20px;
+            }
+
+            .additional-card .card-content .details {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+        }
+
+        /* Mobile Navigation */
+        @media (max-width: 768px) {
+            .navlinks.mobile-open {
+                display: flex;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo-section">
+                <h1>The Property</h1>
+            </div>
+
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <ul class="navlinks" id="navlinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="properties.html">Properties</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="agent.html">Agent</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="more-pages.html">More Pages</a></li>
+                <li><a href="dropdown.html">Dropdown</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="button">
+                <button>Get Started</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero section -->
+    <section class="hero">
+        <div class="hero-left">
+            <button><span class="star">★</span> Premium Properties</button>
+            <h1>Discover Your Perfect Home in the Heart of the City</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Browse thousands of verified listings from trusted agents.</p>
+
+            <div class="search-box">
+                <input type="text" placeholder="Location">
+                <div class="row">
+                    <select>
+                        <option>Property Type</option>
+                        <option>House</option>
+                        <option>Apartment</option>
+                        <option>Condo</option>
+                        <option>Townhouse</option>
+                        <option>Land</option>
+                    </select>
+                    <select>
+                        <option>Price Range</option>
+                        <option>$500 - $1000</option>
+                        <option>$1000 - $2000</option>
+                        <option>$2000+</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <select>
+                        <option>Bedrooms</option>
+                        <option>1 Bedroom</option>
+                        <option>2 Bedrooms</option>
+                        <option>3 Bedrooms</option>
+                        <option>4 Bedrooms</option>
+                        <option>5+ Bedrooms</option>
+                    </select>
+                    <select>
+                        <option>Bathrooms</option>
+                        <option>1 Bathroom</option>
+                        <option>2 Bathrooms</option>
+                        <option>3 Bathrooms</option>
+                        <option>4 Bathrooms</option>
+                        <option>5+ Bathrooms</option>
+                    </select>
+                </div>
+                <button>Search</button>
+            </div>
+
+            <div class="stats-cards">
+                <div class="card">
+                    <h2>2847+</h2>
+                    <p>Verified Properties</p>
+                </div>
+                <div class="card">
+                    <h2>1650+</h2>
+                    <p>Happy Clients</p>
+                </div>
+                <div class="card">
+                    <h2>120+</h2>
+                    <p>Top Agents</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-right">
+            <img src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/real-estate/property-exterior-3.webp"
+                alt="Main" class="main-img">
+            <img src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/real-estate/property-interior-7.webp"
+                alt="Small1" class="small top-left">
+
+
+        </div>
+    </section>
+
+    <!-- About section -->
+    <section class="about-section">
+        <div class="about-container">
+            <div class="left-content">
+                <div class="premium-badge">
+                    Premium Real Estate
+                </div>
+
+                <h1 class="main-heading">
+                    Transforming Real Estate Dreams Into Reality
+                </h1>
+
+                <p class="description">
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore
+                    dolore magna aliqua. Enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip
+                    consequat.
+                </p>
+
+                <div class="stats-cards">
+                    <div class="card">
+                        <h2>2800+</h2>
+                        <p>Properties Listed</p>
+                    </div>
+
+                    <div class="card">
+                        <h2>95%</h2>
+                        <p>Success Rate</p>
+                    </div>
+                    <div class="card">
+                        <h2>24/7</h2>
+                        <p>Client Support</p>
+                    </div>
+                </div>
+
+                <ul class="features-list">
+                    <li>
+                        <div class="checkmark"></div>
+                        Expert market analysis and pricing strategies
+                    </li>
+                    <li>
+                        <div class="checkmark"></div>
+                        Personalized property matching services
+                    </li>
+                    <li>
+                        <div class="checkmark"></div>
+                        Professional photography and virtual tours
+                    </li>
+                </ul>
+
+                <div class="bottom-section">
+                    <button class="learn-more-btn">Learn More About Us</button>
+                    <div class="contact-info">
+                        <div class="phone-icon"></div>
+                        <div class="contact-details">
+                            <div class="contact-text">Need assistance?</div>
+                            <div class="phone-number">+1 (555) 987-6543</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-content">
+                <div class="about-image">
+                    <img src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/real-estate/property-exterior-7.webp"
+                        alt="main img">
+                    <div class="award-badge">
+                        <div class="award-icon">🏆</div>
+                        <div class="award-info">
+                            <div class="award-number">12+</div>
+                            <div class="award-label">Awards Won</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section class="featured-section">
+        <div class="featured-container">
+            <h2>Featured Properties</h2>
+            <p style="text-align: center; margin-bottom: 30px;">Necessitatibus eius consequatur ex aliquid fuga eum
+                quidem sint consectetur velit</p>
+
+            <div class="featured-grid">
+                <!-- Left big card -->
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/real-estate/property-exterior-6.webp"
+                            alt="Seaside Villa Property">
+                        <div class="top-badges">
+                            <span>FEATURED</span>
+                            <span>PREMIUM</span>
+                        </div>
+                        <div class="bottom-badges">
+                            <span><i class="fas fa-bed"></i> 5 Beds</span>
+                            <span><i class="fas fa-bath"></i> 4 Baths</span>
+                            <span><i class="fas fa-expand-arrows-alt"></i> 4,900 sq ft</span>
+                        </div>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-header">
+                            <h3>Seaside Villa with Infinity Pool</h3>
+                            <span class="price">$3,760,000</span>
+                        </div>
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Coronado, CA 92118</span>
+                        </div>
+                        <p>Praesent commodo cursus magna, fusce dapibus tellus ac cursus commodo, vestibulum id ligula
+                            porta
+                            felis euismod semper.</p>
+                        <div class="property-buttons">
+                            <button class="visit">ARRANGE VISIT</button>
+                            <button class="photos">MORE PHOTOS</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right 3 small cards -->
+                <div class="right-cards">
+                    <div class="small-card">
+                        <div class="img-box">
+                            <img src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/real-estate/property-interior-2.webp"
+                                alt="Urban Loft Property">
+                            <span class="badge hot-badge">
+                                <i class="fas fa-fire"></i> Hot
+                            </span>
+                        </div>
+                        <div class="content">
+                            <div>
+                                <h4>Urban Loft with Skyline Views</h4>
+                                <div class="location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Denver, CO 80203
+                                </div>
+                                <div class="details">
+                                    <div class="small-detail-item">
+                                        <i class="fas fa-bed"></i> 2
+                                    </div>
+                                    <div class="small-detail-item">
+                                        <i class="fas fa-bath"></i> 2
+                                    </div>
+                                    <div class="small-detail-item">
+                                        <i class="fas fa-expand-arrows-alt"></i> 1,450 sq ft
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="price-row">
+                                <span class="price">$689,000</span>
+                                <button>DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="small-card">
+                        <div class="img-box">
+                            <img src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/real-estate/property-exterior-3.webp"
+                                alt="Suburban Retreat Property">
+                            <span class="badge new-badge">
+                                <i class="fas fa-plus"></i> New
+                            </span>
+                        </div>
+                        <div class="content">
+                            <div>
+                                <h4>Charming Suburban Retreat</h4>
+                                <div class="location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Austin, TX 78745
+                                </div>
+                                <div class="details">
+                                    <div class="small-detail-item">
+                                        <i class="fas fa-bed"></i> 4
+                                    </div>
+                                    <div class="small-detail-item">
+                                        <i class="fas fa-bath"></i> 3
+                                    </div>
+                                    <div class="small-detail-item">
+                                        <i class="fas fa-expand-arrows-alt"></i> 2,350 sq ft
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="price-row">
+                                <span class="price">$545,000</span>
+                                <button>DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="small-card">
+                        <div class="img-box">
+                            <img src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/real-estate/property-interior-7.webp"
+                                alt="Glass-Roof Penthouse Property">
+                            <span class="badge featured-badge">
+                                <i class="fas fa-star"></i> Featured
+                            </span>
+                        </div>
+                        <div class="content">
+                            <div>
+                                <h4>Glass-Roof Penthouse Suite</h4>
+                                <div class="location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Miami, FL 33131
+                                </div>
+                                <div class="details">
+                                    <div class="small-detail-item">
+                                        <i class="fas fa-bed"></i> 3
+                                    </div>
+                                    <div class="small-detail-item">
+                                        <i class="fas fa-bath"></i> 3
+                                    </div>
+                                    <div class="small-detail-item">
+                                        <i class="fas fa-expand-arrows-alt"></i> 2,120 sq ft
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="price-row">
+                                <span class="price">$1,250,000</span>
+                                <button>DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Properties Section -->
+            <div class="additional-properties">
+                <!-- <h3>More Featured Properties</h3> -->
+                <div class="properties-grid">
+                    <div class="additional-card">
+                        <div class="card-img">
+                            <img src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/real-estate/property-exterior-8.webp"
+                                alt="Property 1">
+                            <span class="badge hot-badge">
+                                <i class="fas fa-fire"></i> Hot
+                            </span>
+                        </div>
+                        <div class="card-content">
+                            <h3>Urban Loft with Skyline Views</h3>
+                            <div class="location">
+                                <i class="fas fa-map-marker-alt"></i> Denver, CO 80203
+                            </div>
+                            <div class="details">
+                                <span><i class="fas fa-bed"></i> 2 Beds</span>
+                                <span><i class="fas fa-bath"></i> 2 Baths</span>
+                                <span><i class="fas fa-ruler-combined"></i> 1450 sq ft</span>
+                            </div>
+                            <div class="card-footer">
+                                <div class="price">$689,000</div>
+                                <button>view</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="additional-card">
+                        <div class="card-img">
+                            <img src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/real-estate/property-interior-10.webp"
+                                alt="Property 2">
+                            <span class="badge new-badge">
+                                <i class="fas fa-plus"></i> New
+                            </span>
+                        </div>
+                        <div class="card-content">
+                            <h3>Luxury Villa with Pool</h3>
+                            <div class="location">
+                                <i class="fas fa-map-marker-alt"></i> Miami, FL 33101
+                            </div>
+                            <div class="details">
+                                <span><i class="fas fa-bed"></i> 4 Beds</span>
+                                <span><i class="fas fa-bath"></i> 3 Baths</span>
+                                <span><i class="fas fa-ruler-combined"></i> 3200 sq ft</span>
+                            </div>
+                            <div class="card-footer">
+                                <div class="price">$1,250,000</div>
+                                <button>view</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="additional-card">
+                        <div class="card-img">
+                            <img src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/real-estate/property-exterior-10.webp"
+                                alt="Property 3">
+                            <span class="badge featured-badge">
+                                <i class="fas fa-star"></i> Featured
+                            </span>
+                        </div>
+                        <div class="card-content">
+                            <h3>Cozy Cottage</h3>
+                            <div class="location">
+                                <i class="fas fa-map-marker-alt"></i> Portland, OR 97201
+                            </div>
+                            <div class="details">
+                                <span><i class="fas fa-bed"></i> 3 Beds</span>
+                                <span><i class="fas fa-bath"></i> 2 Baths</span>
+                                <span><i class="fas fa-ruler-combined"></i> 1800 sq ft</span>
+                            </div>
+                            <div class="card-footer">
+                                <div class="price">$450,000</div>
+                                <button>View</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+
+</html>

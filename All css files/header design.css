@@ -1,0 +1,123 @@
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 50px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo-section h1 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #2c3e50;
+            letter-spacing: -0.5px;
+        }
+
+        .navlinks {
+            display: flex;
+            list-style: none;
+            align-items: center;
+            gap: 35px;
+            margin: 0;
+        }
+
+        .navlinks li {
+            position: relative;
+        }
+
+        .navlinks a {
+            text-decoration: none;
+            color: #6c757d;
+            font-size: 15px;
+            font-weight: 500;
+            padding: 10px 0;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .navlinks a:hover {
+            color: #4a9b8e;
+        }
+
+        /* Special styling for Home link */
+        .navlinks a[href="index.hml"] {
+            color: #4a9b8e;
+            font-weight: 600;
+        }
+
+        /* Dropdown arrows for "More Pages" and "Dropdown" */
+        .navlinks a[href="more pages.html"]:after,
+        .navlinks a[href="dropdown.html"]:after {
+            content: "▼";
+            font-size: 10px;
+            margin-left: 5px;
+            color: #6c757d;
+        }
+
+        .button button {
+            background-color: #4a9b8e;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .button button:hover {
+            background-color: #3d8278;
+            transform: translateY(-1px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .navbar {
+                padding: 15px 30px;
+            }
+            
+            .navlinks {
+                gap: 25px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                gap: 20px;
+                padding: 20px;
+            }
+            
+            .navlinks {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+            }
+            
+            .logo-section h1 {
+                font-size: 20px;
+            }
+        }
