@@ -1,412 +1,412 @@
 * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: #f8fafc;
-            min-height: 100vh;
-            padding: 80px 20px;
-        } */
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-header h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #2c4e50;
-            margin-bottom: 20px;
-        }
-
-        .section-header p {
-            font-size: 1.1rem;
-            color: #64748b;
-            max-width: 600px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
-
-        .agents-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-bottom: 60px;
-        }
-
-        .agent-card {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            position: relative;
-            border: 1px solid #e2e8f0;
-        }
-
-        .agent-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-
-        .agent-image-container {
-            position: relative;
-            height: 280px;
-            overflow: hidden;
-        }
-
-        .agent-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.4s ease;
-        }
-
-        .agent-card:hover .agent-image {
-            transform: scale(1.05);
-        }
-
-        .agent-badge {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .badge-top {
-            background: #fbbf24;
-            color: #92400e;
-        }
-
-        .badge-certified {
-            background: #0891b2;
-            color: white;
-        }
-
-        .badge-rising {
-            background: #10b981;
-            color: white;
-        }
-
-        .contact-overlay {
-            position: absolute;
-            inset: 0;
-            /* full cover photo area */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 15px;
-
-            opacity: 0;
-            /* hidden by default */
-            transform: translateY(20px);
-            /* thoda neeche */
-            transition: opacity 0.4s ease, transform 0.4s ease;
-        }
-
-        /* Jab agent card hover ho */
-        .agent-card:hover .contact-overlay {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .contact-btn {
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            font-size: 1.2rem;
-        }
-
-        .contact-btn:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: scale(1.1);
-            border-color: rgba(255, 255, 255, 0.6);
-        }
-
-        .agent-info {
-            padding: 30px;
-            text-align: center;
-        }
-
-        .agent-name {
-            font-size: 1.4rem;
-            font-weight: 600;
-            color: #1e293b;
-            margin-bottom: 8px;
-        }
-
-        .agent-title {
-            font-size: 0.9rem;
-            color: #4a9b8e;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 25px;
-        }
-
-        .agent-stats {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            margin-bottom: 25px;
-            border: 0.2px solid #4a9b8e;
-            border-radius: 8px;
-            padding: 10px 8px;
-        }
-
-        /* first item k right side pe vertical line */
-        .stat-item:first-child {
-            border-right: 1px solid #4a9b8e;
-            padding-right: 10px;
-        }
-
-        .stat-item {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 1.3rem;
-            font-weight: 200;
-            color: #1e293b;
-            display: block;
-        }
-
-        .stat-label {
-            font-size: 0.75rem;
-            color: #4a9b8e;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-top: 5px;
-        }
-
-        .agent-location {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 5px;
-            margin-bottom: 20px;
-            color: #64748b;
-            font-size: 0.9rem;
-        }
-
-        .agent-tags {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            margin-bottom: 25px;
-        }
-
-        .tag {
-            padding: 6px 12px;
-            background: transparent;
-            /* background: #e0f2fe; */
-            border: 2px solid gainsboro;
-            color: #4a9b8e;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
-
-        .view-profile-btn {
-            background: transparent;
-            color: #4a9b8e;
-            border: 2px solid #e2e8f0;
-            padding: 12px 30px;
-
-            border-radius: 50px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-            position: relative;
-            overflow: hidden;
-
-        }
-
-        .view-profile-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(8, 145, 178, 0.1), transparent);
-            transition: left 0.5s ease;
-        }
-
-        .view-profile-btn:hover::before {
-            left: 100%;
-        }
-
-        .view-profile-btn:hover {
-            border-color: #4a9b8e;
-            transform: translateY(-2px);
-        }
-
-        .explore-btn {
-            text-align: center;
-            margin-top: 40px;
-        }
-
-        .explore-all {
-            background-color: #4a9b8e;
-            color: white;
-            border: none;
-            padding: 16px 40px;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.4s ease;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .explore-all::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.6s ease;
-        }
-
-        .explore-all:hover::before {
-            left: 100%;
-        }
-
-        .explore-all:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(8, 145, 178, 0.3);
-        }
-
-        .explore-arrow {
-            transition: transform 0.3s ease;
-            font-size: 1.2rem;
-        }
-
-        .explore-all:hover .explore-arrow {
-            transform: translateX(8px);
-        }
-
-        .agent-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        /* Hover pe float wali animation chalayegi */
-        .agent-card:nth-child(1):hover {
-            animation: agentFloat1 2s ease-in-out infinite;
-        }
-
-        .agent-card:nth-child(2):hover {
-            animation: agentFloat2 2s ease-in-out infinite;
-        }
-
-        .agent-card:nth-child(3):hover {
-            animation: agentFloat3 2s ease-in-out infinite;
-        }
-
-        /* Float animations */
-        @keyframes agentFloat1 {
-
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-8px);
-            }
-        }
-
-        @keyframes agentFloat2 {
-
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-12px);
-            }
-        }
-
-        @keyframes agentFloat3 {
-
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-6px);
-            }
-        }
-
-        /* Badge animations */
-        .agent-badge {
-            animation: badgePulse 3s ease-in-out infinite;
-        }
-
-        @keyframes badgePulse {
-
-            0%,
-            100% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.05);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .section-header h2 {
-                font-size: 2rem;
-            }
-
-            .agents-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-
-            .agent-card {
-                margin: 0 auto;
-                max-width: 350px;
-            }
-        }
-
-        @media (max-width: 1024px) {
-            .agents-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    /* background: #f8fafc; */
+    /* min-height: 100vh; */
+    /* padding: 80px 20px; */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c4e50;
+    margin-bottom: 20px;
+}
+
+.section-header p {
+    font-size: 1.1rem;
+    color: #64748b;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.agents-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.agent-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    border: 1px solid #e2e8f0;
+}
+
+.agent-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.agent-image-container {
+    position: relative;
+    height: 280px;
+    overflow: hidden;
+}
+
+.agent-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.agent-card:hover .agent-image {
+    transform: scale(1.05);
+}
+
+.agent-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge-top {
+    background: #fbbf24;
+    color: #92400e;
+}
+
+.badge-certified {
+    background: #0891b2;
+    color: white;
+}
+
+.badge-rising {
+    background: #10b981;
+    color: white;
+}
+
+.contact-overlay {
+    position: absolute;
+    inset: 0;
+    /* full cover photo area */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    opacity: 0;
+    /* hidden by default */
+    transform: translateY(20px);
+    /* thoda neeche */
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* Jab agent card hover ho */
+.agent-card:hover .contact-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.contact-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.contact-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.agent-info {
+    padding: 30px;
+    text-align: center;
+}
+
+.agent-name {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 8px;
+}
+
+.agent-title {
+    font-size: 0.9rem;
+    color: #4a9b8e;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 25px;
+}
+
+.agent-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 25px;
+    border: 0.2px solid #4a9b8e;
+    border-radius: 8px;
+    padding: 10px 8px;
+}
+
+/* first item k right side pe vertical line */
+.stat-item:first-child {
+    border-right: 1px solid #4a9b8e;
+    padding-right: 10px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 1.3rem;
+    font-weight: 200;
+    color: #1e293b;
+    display: block;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: #4a9b8e;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 5px;
+}
+
+.agent-location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 20px;
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+.agent-tags {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.tag {
+    padding: 6px 12px;
+    background: transparent;
+    /* background: #e0f2fe; */
+    border: 2px solid gainsboro;
+    color: #4a9b8e;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.view-profile-btn {
+    background: transparent;
+    color: #4a9b8e;
+    border: 2px solid #e2e8f0;
+    padding: 12px 30px;
+
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.view-profile-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(8, 145, 178, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.view-profile-btn:hover::before {
+    left: 100%;
+}
+
+.view-profile-btn:hover {
+    border-color: #4a9b8e;
+    transform: translateY(-2px);
+}
+
+.explore-btn {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.explore-all {
+    background-color: #4a9b8e;
+    color: white;
+    border: none;
+    padding: 16px 40px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.explore-all::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.6s ease;
+}
+
+.explore-all:hover::before {
+    left: 100%;
+}
+
+.explore-all:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(8, 145, 178, 0.3);
+}
+
+.explore-arrow {
+    transition: transform 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.explore-all:hover .explore-arrow {
+    transform: translateX(8px);
+}
+
+.agent-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover pe float wali animation chalayegi */
+.agent-card:nth-child(1):hover {
+    animation: agentFloat1 2s ease-in-out infinite;
+}
+
+.agent-card:nth-child(2):hover {
+    animation: agentFloat2 2s ease-in-out infinite;
+}
+
+.agent-card:nth-child(3):hover {
+    animation: agentFloat3 2s ease-in-out infinite;
+}
+
+/* Float animations */
+@keyframes agentFloat1 {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes agentFloat2 {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+@keyframes agentFloat3 {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+/* Badge animations */
+.agent-badge {
+    animation: badgePulse 3s ease-in-out infinite;
+}
+
+@keyframes badgePulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@media (max-width: 768px) {
+    .section-header h2 {
+        font-size: 2rem;
+    }
+
+    .agents-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .agent-card {
+        margin: 0 auto;
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .agents-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

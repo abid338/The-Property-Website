@@ -1,560 +1,560 @@
  * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: #f8fafc;
-            min-height: 100vh;
-            padding: 80px 20px;
-        } */
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-header h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #2c3e50;
-            margin-bottom: 20px;
-        }
-
-        .section-header p {
-            font-size: 1.1rem;
-            color: #64748b;
-            max-width: 600px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-            margin-bottom: 60px;
-        }
-
-        .service-card {
-            background: white;
-            border-radius: 20px;
-            padding: 50px 35px;
-            text-align: left;
-            position: relative;
-            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            border: 1px solid #e2e8f0;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            min-height: 420px;
-        }
-
-        .service-card.featured {
-            background: linear-gradient(135deg, #0f766e, #14b8a6);
-            color: white;
-            transform: scale(1.02);
-        }
-
-        .service-card.featured .service-number {
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        .service-card.featured .service-title {
-            color: white;
-        }
-
-        .service-card.featured .service-description {
-            color: rgba(255, 255, 255, 0.9);
-        }
-
-        .service-card.featured .feature-list li {
-            color: rgba(255, 255, 255, 0.9);
-        }
-
-        .service-card.featured .service-btn {
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-            color: white;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .service-card.featured .service-btn:hover {
-            background: rgba(255, 255, 255, 0.3);
-            transform: translateX(5px);
-        }
-
-        .service-card:not(.featured):hover {
-            transform: translateY(-15px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-
-        .service-card.featured:hover {
-            transform: translateY(-15px) scale(1.02);
-        }
-
-        .service-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 25px;
-        }
-
-        .service-icon {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: #e2e8f0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            margin-right: 20px;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .service-card.featured .service-icon {
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-        }
-
-        .service-icon:hover {
-            transform: rotate(360deg) scale(1.1);
-        }
-
-        /* Color wave animation for button clicks */
-        @keyframes colorWave {
-            0% {
-                transform: scale(0);
-                opacity: 1;
-            }
-
-            100% {
-                transform: scale(1);
-                opacity: 0;
-            }
-        }
-
-
-        /* Icon click animation */
-        .service-icon.clicked {
-            animation: iconSpin 0.6s ease-out;
-        }
-
-        @keyframes iconSpin {
-            0% {
-                transform: rotate(0deg) scale(1);
-            }
-
-            50% {
-                transform: rotate(180deg) scale(1.2);
-            }
-
-            100% {
-                transform: rotate(360deg) scale(1);
-            }
-        }
-
-        /* Enhanced hover animations for cards */
-        .service-card {
-            position: relative;
-        }
-
-        .service-card::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, rgba(15, 118, 110, 0.05), rgba(20, 184, 166, 0.05));
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            border-radius: 20px;
-            pointer-events: none;
-        }
-
-        .service-card:hover::after {
-            opacity: 1;
-        }
-
-        /* Floating animation for cards */
-        .service-card:nth-child(1) {
-            animation: slideUp 0.6s ease-out 0.1s both, continuousFloat1 3s ease-in-out infinite;
-        }
-
-        .service-card:nth-child(2) {
-            animation: slideUp 0.6s ease-out 0.2s both, continuousFloat2 3s ease-in-out infinite 0.5s;
-        }
-
-        .service-card:nth-child(3) {
-            animation: slideUp 0.6s ease-out 0.3s both, continuousFloat3 3s ease-in-out infinite 1s;
-        }
-
-        .service-card:nth-child(4) {
-            animation: slideUp 0.6s ease-out 0.4s both, continuousFloat4 3s ease-in-out infinite 1.5s;
-        }
-
-        @keyframes continuousFloat1 {
-
-            0%,
-            100% {
-                transform: translateY(0px);
-            }
-
-            50% {
-                transform: translateY(-12px);
-            }
-        }
-
-        @keyframes continuousFloat2 {
-
-            0%,
-            100% {
-                transform: translateY(0px);
-            }
-
-            50% {
-                transform: translateY(-8px);
-            }
-        }
-
-        @keyframes continuousFloat3 {
-
-            0%,
-            100% {
-                transform: translateY(0px);
-            }
-
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-
-        @keyframes continuousFloat4 {
-
-            0%,
-            100% {
-                transform: translateY(0px);
-            }
-
-            50% {
-                transform: translateY(-14px);
-            }
-        }
-
-        /* Icon pulse animation */
-        .service-icon {
-            animation: iconPulse 3s ease-in-out infinite;
-        }
-
-        @keyframes iconPulse {
-
-            0%,
-            100% {
-                box-shadow: 0 0 0 0 rgba(15, 118, 110, 0.3);
-            }
-
-            50% {
-                box-shadow: 0 0 0 20px rgba(15, 118, 110, 0);
-            }
-        }
-
-        /* Button shimmer effect */
-        .service-btn::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-            transition: left 0.6s ease;
-        }
-
-        .service-btn:hover::after {
-            left: 100%;
-        }
-
-        /* Discover button glow effect */
-        .discover-more {
-            box-shadow: 0 0 20px rgba(15, 118, 110, 0.3);
-            animation: buttonGlow 2s ease-in-out infinite alternate;
-        }
-
-        @keyframes buttonGlow {
-            0% {
-                box-shadow: 0 0 20px rgba(15, 118, 110, 0.3);
-            }
-
-            100% {
-                box-shadow: 0 0 30px rgba(15, 118, 110, 0.5), 0 0 40px rgba(15, 118, 110, 0.2);
-            }
-        }
-
-        /* Text fade-in animation */
-        .service-title,
-        .service-description {
-            animation: fadeInUp 0.8s ease-out 0.5s both;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Feature list hover stagger animation */
-        .feature-list li:nth-child(1):hover {
-            animation: fadeInLeft 0.6s ease-out both;
-        }
-
-        .feature-list li:nth-child(2):hover {
-            animation: fadeInLeft 0.6s ease-out 0.1s both;
-        }
-
-        .feature-list li:nth-child(3):hover {
-            animation: fadeInLeft 0.6s ease-out 0.2s both;
-        }
-
-        /* Animation keyframes */
-        @keyframes fadeInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-
-        .service-number {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #cbd5e1;
-        }
-
-        .service-title {
-            font-size: 1.4rem;
-            font-weight: 600;
-            color: #1e293b;
-            margin-bottom: 15px;
-        }
-
-        .service-description {
-            font-size: 0.95rem;
-            color: #64748b;
-            line-height: 1.6;
-            margin-bottom: 25px;
-        }
-
-        .feature-list {
-            list-style: none;
-            margin-bottom: 30px;
-        }
-
-        .feature-list li {
-            font-size: 0.9rem;
-            color: #64748b;
-            margin-bottom: 8px;
-            position: relative;
-            padding-left: 20px;
-        }
-
-        .feature-list li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: #10b981;
-            font-weight: bold;
-        }
-
-        .service-card.featured .feature-list li::before {
-            color: rgba(255, 255, 255, 0.8);
-        }
-
-        .service-btn {
-            background: transparent;
-            color: #4a9b8e;
-            border: 2px solid #e2e8f0;
-            padding: 12px 24px;
-            border-radius: 30px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .service-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(15, 118, 110, 0.1), transparent);
-            transition: left 0.5s ease;
-        }
-
-        .service-btn:hover::before {
-            left: 100%;
-        }
-
-        .service-btn:hover {
-            border-color: #4a9b8e;
-            transform: translateX(5px);
-        }
-
-        .btn-arrow {
-            transition: transform 0.3s ease;
-        }
-
-        .service-btn:hover .btn-arrow {
-            transform: translateX(5px);
-        }
-
-        .discover-btn {
-            text-align: center;
-            margin-top: 40px;
-        }
-
-        .discover-more {
-            background:#4a9b8e;
-            color: white;
-            border: none;
-            padding: 16px 40px;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.4s ease;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .discover-more::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.6s ease;
-        }
-
-        .discover-more:hover::before {
-            left: 100%;
-        }
-
-        .discover-more:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(15, 118, 110, 0.3);
-        }
-
-        .discover-arrow {
-            transition: transform 0.3s ease;
-            font-size: 1.2rem;
-        }
-
-        .discover-more:hover .discover-arrow {
-            transform: translateX(8px);
-        }
-
-        @media (max-width: 768px) {
-            .section-header h2 {
-                font-size: 2rem;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-
-            .service-card {
-                padding: 30px 20px;
-            }
-
-            .service-header {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .service-icon {
-                margin-right: 0;
-                margin-bottom: 15px;
-            }
-        }
-
-        /* Stagger animation for cards */
-        /* Stagger animation for cards (load time) */
-        .service-card:nth-child(1) {
-            animation: slideUp 0.6s ease-out 0.1s both;
-        }
-
-        .service-card:nth-child(2) {
-            animation: slideUp 0.6s ease-out 0.2s both;
-        }
-
-        .service-card:nth-child(3) {
-            animation: slideUp 0.6s ease-out 0.3s both;
-        }
-
-        .service-card:nth-child(4) {
-            animation: slideUp 0.6s ease-out 0.4s both;
-        }
-
-        /* Load animation */
-        @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Hover bounce effect */
-        .service-card:hover {
-            animation: bounce 0.8s ease-in-out forwards;
-        }
-
-        /* Bounce animation */
-        @keyframes bounce {
-
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-15px);
-            }
-        }
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ body {
+     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+     /* background: #f8fafc; */
+     /* min-height: 100vh;
+            padding: 80px 20px; */
+ }
+
+ .container {
+     max-width: 1200px;
+     margin: 0 auto;
+ }
+
+ .section-header {
+     text-align: center;
+     margin-bottom: 60px;
+ }
+
+ .section-header h2 {
+     font-size: 2.5rem;
+     font-weight: 700;
+     color: #2c3e50;
+     margin-bottom: 20px;
+ }
+
+ .section-header p {
+     font-size: 1.1rem;
+     color: #64748b;
+     max-width: 600px;
+     margin: 0 auto;
+     line-height: 1.6;
+ }
+
+ .services-grid {
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     gap: 30px;
+     margin-bottom: 60px;
+ }
+
+ .service-card {
+     background: white;
+     border-radius: 20px;
+     padding: 50px 35px;
+     text-align: left;
+     position: relative;
+     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+     border: 1px solid #e2e8f0;
+     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+     overflow: hidden;
+     min-height: 420px;
+ }
+
+ .service-card.featured {
+     background: linear-gradient(135deg, #0f766e, #14b8a6);
+     color: white;
+     transform: scale(1.02);
+ }
+
+ .service-card.featured .service-number {
+     color: rgba(255, 255, 255, 0.7);
+ }
+
+ .service-card.featured .service-title {
+     color: white;
+ }
+
+ .service-card.featured .service-description {
+     color: rgba(255, 255, 255, 0.9);
+ }
+
+ .service-card.featured .feature-list li {
+     color: rgba(255, 255, 255, 0.9);
+ }
+
+ .service-card.featured .service-btn {
+     background: rgba(255, 255, 255, 0.2);
+     backdrop-filter: blur(10px);
+     color: white;
+     border: 1px solid rgba(255, 255, 255, 0.3);
+ }
+
+ .service-card.featured .service-btn:hover {
+     background: rgba(255, 255, 255, 0.3);
+     transform: translateX(5px);
+ }
+
+ .service-card:not(.featured):hover {
+     transform: translateY(-15px);
+     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+ }
+
+ .service-card.featured:hover {
+     transform: translateY(-15px) scale(1.02);
+ }
+
+ .service-header {
+     display: flex;
+     align-items: center;
+     margin-bottom: 25px;
+ }
+
+ .service-icon {
+     width: 60px;
+     height: 60px;
+     border-radius: 50%;
+     background: #e2e8f0;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-size: 1.5rem;
+     margin-right: 20px;
+     transition: all 0.3s ease;
+     cursor: pointer;
+ }
+
+ .service-card.featured .service-icon {
+     background: rgba(255, 255, 255, 0.2);
+     color: white;
+ }
+
+ .service-icon:hover {
+     transform: rotate(360deg) scale(1.1);
+ }
+
+ /* Color wave animation for button clicks */
+ @keyframes colorWave {
+     0% {
+         transform: scale(0);
+         opacity: 1;
+     }
+
+     100% {
+         transform: scale(1);
+         opacity: 0;
+     }
+ }
+
+
+ /* Icon click animation */
+ .service-icon.clicked {
+     animation: iconSpin 0.6s ease-out;
+ }
+
+ @keyframes iconSpin {
+     0% {
+         transform: rotate(0deg) scale(1);
+     }
+
+     50% {
+         transform: rotate(180deg) scale(1.2);
+     }
+
+     100% {
+         transform: rotate(360deg) scale(1);
+     }
+ }
+
+ /* Enhanced hover animations for cards */
+ .service-card {
+     position: relative;
+ }
+
+ .service-card::after {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background: linear-gradient(45deg, rgba(15, 118, 110, 0.05), rgba(20, 184, 166, 0.05));
+     opacity: 0;
+     transition: opacity 0.3s ease;
+     border-radius: 20px;
+     pointer-events: none;
+ }
+
+ .service-card:hover::after {
+     opacity: 1;
+ }
+
+ /* Floating animation for cards */
+ .service-card:nth-child(1) {
+     animation: slideUp 0.6s ease-out 0.1s both, continuousFloat1 3s ease-in-out infinite;
+ }
+
+ .service-card:nth-child(2) {
+     animation: slideUp 0.6s ease-out 0.2s both, continuousFloat2 3s ease-in-out infinite 0.5s;
+ }
+
+ .service-card:nth-child(3) {
+     animation: slideUp 0.6s ease-out 0.3s both, continuousFloat3 3s ease-in-out infinite 1s;
+ }
+
+ .service-card:nth-child(4) {
+     animation: slideUp 0.6s ease-out 0.4s both, continuousFloat4 3s ease-in-out infinite 1.5s;
+ }
+
+ @keyframes continuousFloat1 {
+
+     0%,
+     100% {
+         transform: translateY(0px);
+     }
+
+     50% {
+         transform: translateY(-12px);
+     }
+ }
+
+ @keyframes continuousFloat2 {
+
+     0%,
+     100% {
+         transform: translateY(0px);
+     }
+
+     50% {
+         transform: translateY(-8px);
+     }
+ }
+
+ @keyframes continuousFloat3 {
+
+     0%,
+     100% {
+         transform: translateY(0px);
+     }
+
+     50% {
+         transform: translateY(-10px);
+     }
+ }
+
+ @keyframes continuousFloat4 {
+
+     0%,
+     100% {
+         transform: translateY(0px);
+     }
+
+     50% {
+         transform: translateY(-14px);
+     }
+ }
+
+ /* Icon pulse animation */
+ .service-icon {
+     animation: iconPulse 3s ease-in-out infinite;
+ }
+
+ @keyframes iconPulse {
+
+     0%,
+     100% {
+         box-shadow: 0 0 0 0 rgba(15, 118, 110, 0.3);
+     }
+
+     50% {
+         box-shadow: 0 0 0 20px rgba(15, 118, 110, 0);
+     }
+ }
+
+ /* Button shimmer effect */
+ .service-btn::after {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: -100%;
+     width: 100%;
+     height: 100%;
+     background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+     transition: left 0.6s ease;
+ }
+
+ .service-btn:hover::after {
+     left: 100%;
+ }
+
+ /* Discover button glow effect */
+ .discover-more {
+     box-shadow: 0 0 20px rgba(15, 118, 110, 0.3);
+     animation: buttonGlow 2s ease-in-out infinite alternate;
+ }
+
+ @keyframes buttonGlow {
+     0% {
+         box-shadow: 0 0 20px rgba(15, 118, 110, 0.3);
+     }
+
+     100% {
+         box-shadow: 0 0 30px rgba(15, 118, 110, 0.5), 0 0 40px rgba(15, 118, 110, 0.2);
+     }
+ }
+
+ /* Text fade-in animation */
+ .service-title,
+ .service-description {
+     animation: fadeInUp 0.8s ease-out 0.5s both;
+ }
+
+ @keyframes fadeInUp {
+     from {
+         opacity: 0;
+         transform: translateY(20px);
+     }
+
+     to {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
+
+ /* Feature list hover stagger animation */
+ .feature-list li:nth-child(1):hover {
+     animation: fadeInLeft 0.6s ease-out both;
+ }
+
+ .feature-list li:nth-child(2):hover {
+     animation: fadeInLeft 0.6s ease-out 0.1s both;
+ }
+
+ .feature-list li:nth-child(3):hover {
+     animation: fadeInLeft 0.6s ease-out 0.2s both;
+ }
+
+ /* Animation keyframes */
+ @keyframes fadeInLeft {
+     from {
+         opacity: 0;
+         transform: translateX(-20px);
+     }
+
+     to {
+         opacity: 1;
+         transform: translateX(0);
+     }
+ }
+
+
+ .service-number {
+     font-size: 2rem;
+     font-weight: 700;
+     color: #cbd5e1;
+ }
+
+ .service-title {
+     font-size: 1.4rem;
+     font-weight: 600;
+     color: #1e293b;
+     margin-bottom: 15px;
+ }
+
+ .service-description {
+     font-size: 0.95rem;
+     color: #64748b;
+     line-height: 1.6;
+     margin-bottom: 25px;
+ }
+
+ .feature-list {
+     list-style: none;
+     margin-bottom: 30px;
+ }
+
+ .feature-list li {
+     font-size: 0.9rem;
+     color: #64748b;
+     margin-bottom: 8px;
+     position: relative;
+     padding-left: 20px;
+ }
+
+ .feature-list li::before {
+     content: '✓';
+     position: absolute;
+     left: 0;
+     color: #10b981;
+     font-weight: bold;
+ }
+
+ .service-card.featured .feature-list li::before {
+     color: rgba(255, 255, 255, 0.8);
+ }
+
+ .service-btn {
+     background: transparent;
+     color: #4a9b8e;
+     border: 2px solid #e2e8f0;
+     padding: 12px 24px;
+     border-radius: 30px;
+     font-weight: 600;
+     cursor: pointer;
+     transition: all 0.3s ease;
+     text-decoration: none;
+     display: inline-flex;
+     align-items: center;
+     gap: 8px;
+     position: relative;
+     overflow: hidden;
+ }
+
+ .service-btn::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: -100%;
+     width: 100%;
+     height: 100%;
+     background: linear-gradient(90deg, transparent, rgba(15, 118, 110, 0.1), transparent);
+     transition: left 0.5s ease;
+ }
+
+ .service-btn:hover::before {
+     left: 100%;
+ }
+
+ .service-btn:hover {
+     border-color: #4a9b8e;
+     transform: translateX(5px);
+ }
+
+ .btn-arrow {
+     transition: transform 0.3s ease;
+ }
+
+ .service-btn:hover .btn-arrow {
+     transform: translateX(5px);
+ }
+
+ .discover-btn {
+     text-align: center;
+     margin-top: 40px;
+ }
+
+ .discover-more {
+     background: #4a9b8e;
+     color: white;
+     border: none;
+     padding: 16px 40px;
+     border-radius: 50px;
+     font-size: 1.1rem;
+     font-weight: 600;
+     cursor: pointer;
+     transition: all 0.4s ease;
+     text-decoration: none;
+     display: inline-flex;
+     align-items: center;
+     gap: 10px;
+     position: relative;
+     overflow: hidden;
+ }
+
+ .discover-more::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: -100%;
+     width: 100%;
+     height: 100%;
+     background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+     transition: left 0.6s ease;
+ }
+
+ .discover-more:hover::before {
+     left: 100%;
+ }
+
+ .discover-more:hover {
+     transform: translateY(-3px);
+     box-shadow: 0 15px 35px rgba(15, 118, 110, 0.3);
+ }
+
+ .discover-arrow {
+     transition: transform 0.3s ease;
+     font-size: 1.2rem;
+ }
+
+ .discover-more:hover .discover-arrow {
+     transform: translateX(8px);
+ }
+
+ @media (max-width: 768px) {
+     .section-header h2 {
+         font-size: 2rem;
+     }
+
+     .services-grid {
+         grid-template-columns: 1fr;
+         gap: 20px;
+     }
+
+     .service-card {
+         padding: 30px 20px;
+     }
+
+     .service-header {
+         flex-direction: column;
+         text-align: center;
+     }
+
+     .service-icon {
+         margin-right: 0;
+         margin-bottom: 15px;
+     }
+ }
+
+ /* Stagger animation for cards */
+ /* Stagger animation for cards (load time) */
+ .service-card:nth-child(1) {
+     animation: slideUp 0.6s ease-out 0.1s both;
+ }
+
+ .service-card:nth-child(2) {
+     animation: slideUp 0.6s ease-out 0.2s both;
+ }
+
+ .service-card:nth-child(3) {
+     animation: slideUp 0.6s ease-out 0.3s both;
+ }
+
+ .service-card:nth-child(4) {
+     animation: slideUp 0.6s ease-out 0.4s both;
+ }
+
+ /* Load animation */
+ @keyframes slideUp {
+     from {
+         opacity: 0;
+         transform: translateY(30px);
+     }
+
+     to {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
+
+ /* Hover bounce effect */
+ .service-card:hover {
+     animation: bounce 0.8s ease-in-out forwards;
+ }
+
+ /* Bounce animation */
+ @keyframes bounce {
+
+     0%,
+     100% {
+         transform: translateY(0);
+     }
+
+     50% {
+         transform: translateY(-15px);
+     }
+ }
