@@ -1,3 +1,4 @@
+/* whyUs section  */
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +16,6 @@ body {
     margin: 0 auto;
     padding: 80px 50px;
     text-align: center;
-
 }
 
 .section-header {
@@ -68,6 +68,27 @@ body {
     height: 450px;
     object-fit: cover;
     border-radius: 15px;
+    transition: all 0.6s ease;
+    animation: videoLoad 1.5s ease-out;
+    cursor: pointer;
+}
+
+@keyframes videoLoad {
+    0% {
+        opacity: 0;
+        transform: scale(0.8) rotateX(90deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) rotateX(0deg);
+    }
+}
+
+.video-container:hover .coding_vlog {
+    transform: scale(1.05);
+    filter: brightness(1.1) contrast(1.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 .years-badge,
@@ -239,36 +260,127 @@ body {
 }
 
 @media (max-width:992px) {
+    .why-us-section {
+        padding: 60px 30px;
+    }
+    
     .main-content {
         gap: 40px;
     }
 
     .stats-row {
-        flex-direction: column;
+        justify-content: center;
     }
 }
 
 @media (max-width:768px) {
+    .why-us-section {
+        padding: 50px 20px;
+        max-width: 100%;
+        margin: 0;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+    }
+
     .main-content {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .video-container {
+        margin: 0 auto;
+        max-width: 100%;
+    }
+    
+    .coding_vlog {
+        height: 300px;
+    }
+
+    .content-right {
+        text-align: center;
+    }
+    
+    .content-right h2 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .content-right p {
+        text-align: center;
+        max-width: 100%;
+        margin: 0 auto 30px;
     }
 
     .features-grid {
         grid-template-columns: 1fr;
+        gap: 25px;
+        max-width: 400px;
+        margin: 0 auto 30px;
+    }
+    
+    .feature-item {
+        text-align: left;
+        justify-content: center;
+        max-width: 100%;
     }
 
     .stats-row {
         flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        margin-bottom: 30px;
     }
-
-    .content-right h2,
-    .content-right p {
-        text-align: center;
+    
+    .stat-badge {
+        max-width: 200px;
+        width: 100%;
     }
 
     .cta-buttons {
         flex-direction: column;
         align-items: center;
+        gap: 15px;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 250px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .why-us-section {
+        padding: 40px 15px;
+    }
+    
+    .section-title {
+        font-size: 1.7rem;
+    }
+    
+    .coding_vlog {
+        height: 250px;
+    }
+    
+    .content-right h2 {
+        font-size: 1.5rem;
+    }
+    
+    .years-badge,
+    .clients-badge {
+        right: 10px;
+        padding: 10px 15px;
+    }
+    
+    .years-number,
+    .clients-number {
+        font-size: 1.5rem;
     }
 }

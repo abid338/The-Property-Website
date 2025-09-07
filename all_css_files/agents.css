@@ -14,6 +14,7 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .section-header {
@@ -216,6 +217,7 @@ body {
     gap: 10px;
     justify-content: center;
     margin-bottom: 25px;
+    flex-wrap: wrap;
 }
 
 .tag {
@@ -243,7 +245,6 @@ body {
     display: inline-block;
     position: relative;
     overflow: hidden;
-
 }
 
 .view-profile-btn::before {
@@ -337,36 +338,27 @@ body {
 
 /* Float animations */
 @keyframes agentFloat1 {
-
-    0%,
-    100% {
+    0%, 100% {
         transform: translateY(0);
     }
-
     50% {
         transform: translateY(-8px);
     }
 }
 
 @keyframes agentFloat2 {
-
-    0%,
-    100% {
+    0%, 100% {
         transform: translateY(0);
     }
-
     50% {
         transform: translateY(-12px);
     }
 }
 
 @keyframes agentFloat3 {
-
-    0%,
-    100% {
+    0%, 100% {
         transform: translateY(0);
     }
-
     50% {
         transform: translateY(-6px);
     }
@@ -378,35 +370,109 @@ body {
 }
 
 @keyframes badgePulse {
-
-    0%,
-    100% {
+    0%, 100% {
         transform: scale(1);
     }
-
     50% {
         transform: scale(1.05);
     }
 }
 
+/* FIXED RESPONSIVE DESIGN */
+
+/* Desktop (laptop) - 3 columns in one row */
+@media (min-width: 1025px) {
+    .agents-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+}
+
+/* Tablet - 2 columns */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .agents-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    
+    .section-header h2 {
+        font-size: 2.2rem;
+    }
+}
+
+/* Mobile - 1 column (3 cards in separate rows) */
 @media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .section-header {
+        margin-bottom: 40px;
+    }
+    
     .section-header h2 {
         font-size: 2rem;
+    }
+    
+    .section-header p {
+        font-size: 1rem;
     }
 
     .agents-grid {
         grid-template-columns: 1fr;
         gap: 20px;
+        margin-bottom: 40px;
     }
 
     .agent-card {
         margin: 0 auto;
-        max-width: 350px;
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .agent-image-container {
+        height: 240px;
+    }
+    
+    .agent-info {
+        padding: 25px 20px;
+    }
+    
+    .agent-name {
+        font-size: 1.3rem;
+    }
+    
+    .agent-tags {
+        gap: 8px;
+    }
+    
+    .tag {
+        font-size: 0.75rem;
+        padding: 5px 10px;
+    }
+    
+    .view-profile-btn {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+    
+    .explore-all {
+        padding: 14px 35px;
+        font-size: 1rem;
     }
 }
 
-@media (max-width: 1024px) {
-    .agents-grid {
-        grid-template-columns: repeat(2, 1fr);
+/* Extra small screens */
+@media (max-width: 480px) {
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .agent-image-container {
+        height: 200px;
+    }
+    
+    .agent-info {
+        padding: 20px 15px;
     }
 }

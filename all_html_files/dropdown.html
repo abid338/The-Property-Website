@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real Estate About Section</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
+      overflow-x: hidden;
+    }
+
+    .about-section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .left-content {
+      padding-right: 20px;
+    }
+
+    .main-heading {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #222;
+    }
+
+    .description {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    /* Button + Contact */
+    .bottom-section {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .learn-more-btn {
+      background: #4a9b8e;
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 30px;
+      border: none;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .contact-info {
+      font-size: 14px;
+      color: #444;
+    }
+
+    /* Right content images */
+    .right-content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .main-image {
+      width: 100%;
+      height: 350px;
+      border-radius: 12px;
+      overflow: hidden;
+      animation: fadeIn 1.2s ease forwards;
+    }
+
+    .main-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .side-images-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .side-image {
+      height: 180px;
+      border-radius: 12px;
+      overflow: hidden;
+      opacity: 0;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    .side-image:nth-child(1) {
+      animation-delay: 0.5s;
+    }
+
+    .side-image:nth-child(2) {
+      animation-delay: 1s;
+    }
+
+    .side-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Fade-in animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .about-section {
+        grid-template-columns: 1fr;
+      }
+      .left-content {
+        order: 2;
+        text-align: center;
+        padding: 0;
+      }
+      .right-content {
+        order: 1;
+      }
+      .bottom-section {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .main-heading {
+        font-size: 28px;
+      }
+      .side-images-row {
+        grid-template-columns: 1fr;
+      }
+      .side-image {
+        height: 160px;
+      }
+      .bottom-section {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="about-section">
+    <div class="left-content">
+      <h2 class="main-heading">Transforming Real Estate Dreams Into Reality</h2>
+      <p class="description">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+      <div class="bottom-section">
+        <button class="learn-more-btn">Learn More About Us</button>
+        <div class="contact-info">
+          📞 Call Us Now <br> +1 (555) 987-6543
+        </div>
+      </div>
+    </div>
+
+    <div class="right-content">
+      <div class="main-image">
+        <img src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/real-estate/property-exterior-7.webp" alt="Main House">
+      </div>
+      <div class="side-images-row">
+        <div class="side-image">
+          <img src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/real-estate/property-interior-8.webp" alt="Interior">
+        </div>
+        <div class="side-image">
+          <img src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/real-estate/agent-3.webp" alt="Agent">
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
