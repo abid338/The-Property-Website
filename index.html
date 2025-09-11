@@ -1,1054 +1,1272 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <!-- Font Awesome CDN (latest v6.5.0) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <title>The Property</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="navbar">
-            <div class="logo-section">
-                <h1>The Property</h1>
-            </div>
-            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul class="navlinks" id="navlinks">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="properties.html">Properties</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="agent.html">Agent</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="more-pages.html">More Pages</a></li>
-                <li><a href="dropdown.html">Dropdown</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class="button">
-                <button>Get Started</button>
-            </div>
+      <div class="navbar">
+        <div class="logo-section">
+          <h1>The Property</h1>
         </div>
+        <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="navlinks" id="navlinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="properties.html">Properties</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="agent.html">Agent</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="more-pages.html">More Pages</a></li>
+          <li><a href="dropdown.html">Dropdown</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="button">
+          <button>Get Started</button>
+        </div>
+      </div>
     </header>
     <!-- Hero section -->
     <section class="hero">
-        <div class="hero-left">
-            <button><span class="star">★</span> Premium Properties</button>
-            <h1>Discover Your Perfect Home in the Heart of the City</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Browse thousands of verified listings from trusted agents.</p>
-            <div class="search-box">
-                <input type="text" placeholder="Location">
-                <div class="row">
-                    <select>
-                        <option>Property Type</option>
-                        <option>House</option>
-                        <option>Apartment</option>
-                        <option>Condo</option>
-                        <option>Townhouse</option>
-                        <option>Land</option>
-                    </select>
-                    <select>
-                        <option>Price Range</option>
-                        <option>$500 - $1000</option>
-                        <option>$1000 - $2000</option>
-                        <option>$2000+</option>
-                    </select>
-                </div>
-                <div class="row">
-                    <select>
-                        <option>Bedrooms</option>
-                        <option>1 Bedroom</option>
-                        <option>2 Bedrooms</option>
-                        <option>3 Bedrooms</option>
-                        <option>4 Bedrooms</option>
-                        <option>5+ Bedrooms</option>
-                    </select>
-                    <select>
-                        <option>Bathrooms</option>
-                        <option>1 Bathroom</option>
-                        <option>2 Bathrooms</option>
-                        <option>3 Bathrooms</option>
-                        <option>4 Bathrooms</option>
-                        <option>5+ Bathrooms</option>
-                    </select>
-                </div>
-                <button>Search</button>
-            </div>
-            <div class="stats-container">
-                <div class="stat-card">
-                    <div class="stat-number">2800+</div>
-                    <div class="stat-label">Properties Listed</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">95%</div>
-                    <div class="stat-label">Success Rate</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">24/7</div>
-                    <div class="stat-label">Client Support</div>
-                </div>
-            </div>
+      <div class="hero-left">
+        <button><span class="star">★</span> Premium Properties</button>
+        <h1>Discover Your Perfect Home in the Heart of the City</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Browse
+          thousands of verified listings from trusted agents.
+        </p>
+        <div class="search-box">
+          <input type="text" placeholder="Location" />
+          <div class="row">
+            <select>
+              <option>Property Type</option>
+              <option>House</option>
+              <option>Apartment</option>
+              <option>Condo</option>
+              <option>Townhouse</option>
+              <option>Land</option>
+            </select>
+            <select>
+              <option>Price Range</option>
+              <option>$500 - $1000</option>
+              <option>$1000 - $2000</option>
+              <option>$2000+</option>
+            </select>
+          </div>
+          <div class="row">
+            <select>
+              <option>Bedrooms</option>
+              <option>1 Bedroom</option>
+              <option>2 Bedrooms</option>
+              <option>3 Bedrooms</option>
+              <option>4 Bedrooms</option>
+              <option>5+ Bedrooms</option>
+            </select>
+            <select>
+              <option>Bathrooms</option>
+              <option>1 Bathroom</option>
+              <option>2 Bathrooms</option>
+              <option>3 Bathrooms</option>
+              <option>4 Bathrooms</option>
+              <option>5+ Bathrooms</option>
+            </select>
+          </div>
+          <button>Search</button>
         </div>
-        <div class="hero-right">
-            <img src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/real-estate/property-exterior-3.webp"
-                alt="Main" class="main-img">
-            <img src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/real-estate/property-interior-7.webp"
-                alt="Small1" class="small top-left">
+        <div class="stats-container">
+          <div class="stat-card">
+            <div class="stat-number">2800+</div>
+            <div class="stat-label">Properties Listed</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">95%</div>
+            <div class="stat-label">Success Rate</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">24/7</div>
+            <div class="stat-label">Client Support</div>
+          </div>
         </div>
+      </div>
+      <div class="hero-right">
+        <img
+          src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/real-estate/property-exterior-3.webp"
+          alt="Main"
+          class="main-img"
+        />
+        <img
+          src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/real-estate/property-interior-7.webp"
+          alt="Small1"
+          class="small top-left"
+        />
+      </div>
     </section>
     <!-- About section -->
     <div class="about-section">
-        <div class="left-content">
-            <div class="premium-badge">Premium Real Estate</div>
-            <h2 class="main-heading">Transforming Real Estate Dreams Into Reality</h2>
-            <p class="description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Enim eu minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip
-                consequat.
-            </p>
+      <div class="left-content">
+        <div class="premium-badge">Premium Real Estate</div>
+        <h2 class="main-heading">
+          Transforming Real Estate Dreams Into Reality
+        </h2>
+        <p class="description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Enim eu minim
+          veniam quis nostrud exercitation ullamco laboris nisi ut aliquip
+          consequat.
+        </p>
 
-            <div class="stats-container">
-                <div class="stat-card">
-                    <div class="stat-number">2800+</div>
-                    <div class="stat-label">Luxury Homes</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">95%</div>
-                    <div class="stat-label">Client Satisfaction</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">24/7</div>
-                    <div class="stat-label">Customer Service</div>
-                </div>
-            </div>
-
-            <ul class="features-list">
-                <li><span class="checkmark"></span>Expert market analysis and pricing strategies</li>
-                <li><span class="checkmark"></span>Personalized property matching services</li>
-                <li><span class="checkmark"></span>Professional photography and virtual tours</li>
-            </ul>
-
-            <div class="bottom-section">
-                <button class="learn-more-btn">Learn More About Us</button>
-                <div class="contact-info">
-                    <div class="phone-icon"></div>
-                    <div class="contact-details">
-                        <div class="contact-text">Call Us Now</div>
-                        <div class="phone-number">+1 (555) 987-6543</div>
-                    </div>
-                </div>
-            </div>
+        <div class="stats-container">
+          <div class="stat-card">
+            <div class="stat-number">2800+</div>
+            <div class="stat-label">Luxury Homes</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">95%</div>
+            <div class="stat-label">Client Satisfaction</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">24/7</div>
+            <div class="stat-label">Customer Service</div>
+          </div>
         </div>
 
-        <div class="right-content">
-            <div class="main-image">
-                <img src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/real-estate/property-exterior-7.webp"
-                    alt="Modern luxury house exterior">
-                <div class="experience-badge">
-                    <div class="experience-icon">🏆</div>
-                    <div class="experience-text">
-                        <div class="number">12+</div>
-                        <div class="label">Years Experience</div>
-                    </div>
-                </div>
-            </div>
+        <ul class="features-list">
+          <li>
+            <span class="checkmark"></span>Expert market analysis and pricing
+            strategies
+          </li>
+          <li>
+            <span class="checkmark"></span>Personalized property matching
+            services
+          </li>
+          <li>
+            <span class="checkmark"></span>Professional photography and virtual
+            tours
+          </li>
+        </ul>
 
-            <div class="side-images-row">
-                <div class="side-image">
-                    <img src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/real-estate/property-interior-8.webp"
-                        alt="Luxury interior living room">
-                </div>
-                <div class="side-image">
-                    <img src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/real-estate/agent-3.webp"
-                        alt="Real estate agent consultation">
-                </div>
+        <div class="bottom-section">
+          <button class="learn-more-btn">Learn More About Us</button>
+          <div class="contact-info">
+            <div class="phone-icon"></div>
+            <div class="contact-details">
+              <div class="contact-text">Call Us Now</div>
+              <div class="phone-number">+1 (555) 987-6543</div>
             </div>
+          </div>
         </div>
+      </div>
+
+      <div class="right-content">
+        <div class="main-image">
+          <img
+            src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/real-estate/property-exterior-7.webp"
+            alt="Modern luxury house exterior"
+          />
+          <div class="experience-badge">
+            <div class="experience-icon">🏆</div>
+            <div class="experience-text">
+              <div class="number">12+</div>
+              <div class="label">Years Experience</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="side-images-row">
+          <div class="side-image">
+            <img
+              src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/real-estate/property-interior-8.webp"
+              alt="Luxury interior living room"
+            />
+          </div>
+          <div class="side-image">
+            <img
+              src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/real-estate/agent-3.webp"
+              alt="Real estate agent consultation"
+            />
+          </div>
+        </div>
+      </div>
     </div>
     <!-- Featured Section -->
     <section class="featured-section">
-        <div class="featured-container">
-            <h2>Featured Properties</h2>
-            <p style="text-align: center; margin-bottom: 30px;">Necessitatibus eius consequatur ex aliquid fuga eum
-                quidem sint consectetur velit</p>
-            <div class="featured-grid">
-                <!-- Left big card -->
-                <div class="property-card">
-                    <div class="property-image">
-                        <img src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/real-estate/property-exterior-6.webp"
-                            alt="Seaside Villa Property">
-                        <div class="top-badges">
-                            <span>FEATURED</span>
-                            <span>PREMIUM</span>
-                        </div>
-                        <div class="bottom-badges">
-                            <span><i class="fas fa-bed"></i> 5 Beds</span>
-                            <span><i class="fas fa-bath"></i> 4 Baths</span>
-                            <span><i class="fas fa-expand-arrows-alt"></i> 4,900 sq ft</span>
-                        </div>
-                    </div>
-                    <div class="property-content">
-                        <div class="property-header">
-                            <h3>Seaside Villa with Infinity Pool</h3>
-                            <span class="price">$3,760,000</span>
-                        </div>
-                        <div class="property-location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Coronado, CA 92118</span>
-                        </div>
-                        <p>Praesent commodo cursus magna, fusce dapibus tellus ac cursus commodo, vestibulum id ligula
-                            porta
-                            felis euismod semper.</p>
-                        <div class="property-buttons">
-                            <button class="visit">ARRANGE VISIT</button>
-                            <button class="photos">MORE PHOTOS</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Right 3 small cards -->
-                <div class="right-cards">
-                    <div class="small-card">
-                        <div class="img-box">
-                            <img src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/real-estate/property-interior-2.webp"
-                                alt="Urban Loft Property">
-                            <span class="badge hot-badge">
-                                <i class="fas fa-fire"></i> Hot
-                            </span>
-                        </div>
-                        <div class="content">
-                            <div>
-                                <h4>Urban Loft with Skyline Views</h4>
-                                <div class="location">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    Denver, CO 80203
-                                </div>
-                                <div class="details">
-                                    <div class="small-detail-item">
-                                        <i class="fas fa-bed"></i> 2
-                                    </div>
-                                    <div class="small-detail-item">
-                                        <i class="fas fa-bath"></i> 2
-                                    </div>
-                                    <div class="small-detail-item">
-                                        <i class="fas fa-expand-arrows-alt"></i> 1,450 sq ft
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="price-row">
-                                <span class="price">$689,000</span>
-                                <button>DETAILS</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="small-card">
-                        <div class="img-box">
-                            <img src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/real-estate/property-exterior-3.webp"
-                                alt="Suburban Retreat Property">
-                            <span class="badge new-badge">
-                                <i class="fas fa-plus"></i> New
-                            </span>
-                        </div>
-                        <div class="content">
-                            <div>
-                                <h4>Charming Suburban Retreat</h4>
-                                <div class="location">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    Austin, TX 78745
-                                </div>
-                                <div class="details">
-                                    <div class="small-detail-item">
-                                        <i class="fas fa-bed"></i> 4
-                                    </div>
-                                    <div class="small-detail-item">
-                                        <i class="fas fa-bath"></i> 3
-                                    </div>
-                                    <div class="small-detail-item">
-                                        <i class="fas fa-expand-arrows-alt"></i> 2,350 sq ft
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="price-row">
-                                <span class="price">$545,000</span>
-                                <button>DETAILS</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="small-card">
-                        <div class="img-box">
-                            <img src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/real-estate/property-interior-7.webp"
-                                alt="Glass-Roof Penthouse Property">
-                            <span class="badge featured-badge">
-                                <i class="fas fa-star"></i> Featured
-                            </span>
-                        </div>
-                        <div class="content">
-                            <div>
-                                <h4>Glass-Roof Penthouse Suite</h4>
-                                <div class="location">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    Miami, FL 33131
-                                </div>
-                                <div class="details">
-                                    <div class="small-detail-item">
-                                        <i class="fas fa-bed"></i> 3
-                                    </div>
-                                    <div class="small-detail-item">
-                                        <i class="fas fa-bath"></i> 3
-                                    </div>
-                                    <div class="small-detail-item">
-                                        <i class="fas fa-expand-arrows-alt"></i> 2,120 sq ft
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="price-row">
-                                <span class="price">$1,250,000</span>
-                                <button>DETAILS</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <div class="featured-container">
+        <h2>Featured Properties</h2>
+        <p style="text-align: center; margin-bottom: 30px">
+          Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
+          consectetur velit
+        </p>
+        <div class="featured-grid">
+          <!-- Left big card -->
+          <div class="property-card">
+            <div class="property-image">
+              <img
+                src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/real-estate/property-exterior-6.webp"
+                alt="Seaside Villa Property"
+              />
+              <div class="top-badges">
+                <span>FEATURED</span>
+                <span>PREMIUM</span>
+              </div>
+              <div class="bottom-badges">
+                <span><i class="fas fa-bed"></i> 5 Beds</span>
+                <span><i class="fas fa-bath"></i> 4 Baths</span>
+                <span
+                  ><i class="fas fa-expand-arrows-alt"></i> 4,900 sq ft</span
+                >
+              </div>
             </div>
-            <!-- Additional Properties Section -->
-            <div class="additional-properties">
-                <!-- <h3>More Featured Properties</h3> -->
-                <div class="properties-grid">
-                    <div class="additional-card">
-                        <div class="card-img">
-                            <img src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/real-estate/property-exterior-8.webp"
-                                alt="Property 1">
-                            <span class="badge hot-badge">
-                                <i class="fas fa-fire"></i> Hot
-                            </span>
-                        </div>
-                        <div class="card-content">
-                            <h3>Urban Loft with Skyline Views</h3>
-                            <div class="location">
-                                <i class="fas fa-map-marker-alt"></i> Denver, CO 80203
-                            </div>
-                            <div class="details">
-                                <span><i class="fas fa-bed"></i> 2 Beds</span>
-                                <span><i class="fas fa-bath"></i> 2 Baths</span>
-                                <span><i class="fas fa-ruler-combined"></i> 1450 sq ft</span>
-                            </div>
-                            <div class="card-footer">
-                                <div class="price">$689,000</div>
-                                <button>view</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="additional-card">
-                        <div class="card-img">
-                            <img src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/real-estate/property-interior-10.webp"
-                                alt="Property 2">
-                            <span class="badge new-badge">
-                                <i class="fas fa-plus"></i> New
-                            </span>
-                        </div>
-                        <div class="card-content">
-                            <h3>Luxury Villa with Pool</h3>
-                            <div class="location">
-                                <i class="fas fa-map-marker-alt"></i> Miami, FL 33101
-                            </div>
-                            <div class="details">
-                                <span><i class="fas fa-bed"></i> 4 Beds</span>
-                                <span><i class="fas fa-bath"></i> 3 Baths</span>
-                                <span><i class="fas fa-ruler-combined"></i> 3200 sq ft</span>
-                            </div>
-                            <div class="card-footer">
-                                <div class="price">$1,250,000</div>
-                                <button>view</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="additional-card">
-                        <div class="card-img">
-                            <img src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/real-estate/property-exterior-10.webp"
-                                alt="Property 3">
-                            <span class="badge featured-badge">
-                                <i class="fas fa-star"></i> Featured
-                            </span>
-                        </div>
-                        <div class="card-content">
-                            <h3>Cozy Cottage</h3>
-                            <div class="location">
-                                <i class="fas fa-map-marker-alt"></i> Portland, OR 97201
-                            </div>
-                            <div class="details">
-                                <span><i class="fas fa-bed"></i> 3 Beds</span>
-                                <span><i class="fas fa-bath"></i> 2 Baths</span>
-                                <span><i class="fas fa-ruler-combined"></i> 1800 sq ft</span>
-                            </div>
-                            <div class="card-footer">
-                                <div class="price">$450,000</div>
-                                <button>View</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="property-content">
+              <div class="property-header">
+                <h3>Seaside Villa with Infinity Pool</h3>
+                <span class="price">$3,760,000</span>
+              </div>
+              <div class="property-location">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Coronado, CA 92118</span>
+              </div>
+              <p>
+                Praesent commodo cursus magna, fusce dapibus tellus ac cursus
+                commodo, vestibulum id ligula porta felis euismod semper.
+              </p>
+              <div class="property-buttons">
+                <button class="visit">ARRANGE VISIT</button>
+                <button class="photos">MORE PHOTOS</button>
+              </div>
             </div>
+          </div>
+          <!-- Right 3 small cards -->
+          <div class="right-cards">
+            <div class="small-card">
+              <div class="img-box">
+                <img
+                  src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/real-estate/property-interior-2.webp"
+                  alt="Urban Loft Property"
+                />
+                <span class="badge hot-badge">
+                  <i class="fas fa-fire"></i> Hot
+                </span>
+              </div>
+              <div class="content">
+                <div>
+                  <h4>Urban Loft with Skyline Views</h4>
+                  <div class="location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Denver, CO 80203
+                  </div>
+                  <div class="details">
+                    <div class="small-detail-item">
+                      <i class="fas fa-bed"></i> 2
+                    </div>
+                    <div class="small-detail-item">
+                      <i class="fas fa-bath"></i> 2
+                    </div>
+                    <div class="small-detail-item">
+                      <i class="fas fa-expand-arrows-alt"></i> 1,450 sq ft
+                    </div>
+                  </div>
+                </div>
+                <div class="price-row">
+                  <span class="price">$689,000</span>
+                  <button>DETAILS</button>
+                </div>
+              </div>
+            </div>
+            <div class="small-card">
+              <div class="img-box">
+                <img
+                  src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/real-estate/property-exterior-3.webp"
+                  alt="Suburban Retreat Property"
+                />
+                <span class="badge new-badge">
+                  <i class="fas fa-plus"></i> New
+                </span>
+              </div>
+              <div class="content">
+                <div>
+                  <h4>Charming Suburban Retreat</h4>
+                  <div class="location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Austin, TX 78745
+                  </div>
+                  <div class="details">
+                    <div class="small-detail-item">
+                      <i class="fas fa-bed"></i> 4
+                    </div>
+                    <div class="small-detail-item">
+                      <i class="fas fa-bath"></i> 3
+                    </div>
+                    <div class="small-detail-item">
+                      <i class="fas fa-expand-arrows-alt"></i> 2,350 sq ft
+                    </div>
+                  </div>
+                </div>
+                <div class="price-row">
+                  <span class="price">$545,000</span>
+                  <button>DETAILS</button>
+                </div>
+              </div>
+            </div>
+            <div class="small-card">
+              <div class="img-box">
+                <img
+                  src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/real-estate/property-interior-7.webp"
+                  alt="Glass-Roof Penthouse Property"
+                />
+                <span class="badge featured-badge">
+                  <i class="fas fa-star"></i> Featured
+                </span>
+              </div>
+              <div class="content">
+                <div>
+                  <h4>Glass-Roof Penthouse Suite</h4>
+                  <div class="location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Miami, FL 33131
+                  </div>
+                  <div class="details">
+                    <div class="small-detail-item">
+                      <i class="fas fa-bed"></i> 3
+                    </div>
+                    <div class="small-detail-item">
+                      <i class="fas fa-bath"></i> 3
+                    </div>
+                    <div class="small-detail-item">
+                      <i class="fas fa-expand-arrows-alt"></i> 2,120 sq ft
+                    </div>
+                  </div>
+                </div>
+                <div class="price-row">
+                  <span class="price">$1,250,000</span>
+                  <button>DETAILS</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+        <!-- Additional Properties Section -->
+        <div class="additional-properties">
+          <!-- <h3>More Featured Properties</h3> -->
+          <div class="properties-grid">
+            <div class="additional-card">
+              <div class="card-img">
+                <img
+                  src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/real-estate/property-exterior-8.webp"
+                  alt="Property 1"
+                />
+                <span class="badge hot-badge">
+                  <i class="fas fa-fire"></i> Hot
+                </span>
+              </div>
+              <div class="card-content">
+                <h3>Urban Loft with Skyline Views</h3>
+                <div class="location">
+                  <i class="fas fa-map-marker-alt"></i> Denver, CO 80203
+                </div>
+                <div class="details">
+                  <span><i class="fas fa-bed"></i> 2 Beds</span>
+                  <span><i class="fas fa-bath"></i> 2 Baths</span>
+                  <span><i class="fas fa-ruler-combined"></i> 1450 sq ft</span>
+                </div>
+                <div class="card-footer">
+                  <div class="price">$689,000</div>
+                  <button>view</button>
+                </div>
+              </div>
+            </div>
+            <div class="additional-card">
+              <div class="card-img">
+                <img
+                  src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/real-estate/property-interior-10.webp"
+                  alt="Property 2"
+                />
+                <span class="badge new-badge">
+                  <i class="fas fa-plus"></i> New
+                </span>
+              </div>
+              <div class="card-content">
+                <h3>Luxury Villa with Pool</h3>
+                <div class="location">
+                  <i class="fas fa-map-marker-alt"></i> Miami, FL 33101
+                </div>
+                <div class="details">
+                  <span><i class="fas fa-bed"></i> 4 Beds</span>
+                  <span><i class="fas fa-bath"></i> 3 Baths</span>
+                  <span><i class="fas fa-ruler-combined"></i> 3200 sq ft</span>
+                </div>
+                <div class="card-footer">
+                  <div class="price">$1,250,000</div>
+                  <button>view</button>
+                </div>
+              </div>
+            </div>
+            <div class="additional-card">
+              <div class="card-img">
+                <img
+                  src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/real-estate/property-exterior-10.webp"
+                  alt="Property 3"
+                />
+                <span class="badge featured-badge">
+                  <i class="fas fa-star"></i> Featured
+                </span>
+              </div>
+              <div class="card-content">
+                <h3>Cozy Cottage</h3>
+                <div class="location">
+                  <i class="fas fa-map-marker-alt"></i> Portland, OR 97201
+                </div>
+                <div class="details">
+                  <span><i class="fas fa-bed"></i> 3 Beds</span>
+                  <span><i class="fas fa-bath"></i> 2 Baths</span>
+                  <span><i class="fas fa-ruler-combined"></i> 1800 sq ft</span>
+                </div>
+                <div class="card-footer">
+                  <div class="price">$450,000</div>
+                  <button>View</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <!-- services section  -->
     <div class="container">
-        <div class="section-header">
-            <h2>Featured Services</h2>
-            <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      <div class="section-header">
+        <h2>Featured Services</h2>
+        <p>
+          Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
+          consectetur velit
+        </p>
+      </div>
+      <div class="services-grid">
+        <!-- Service 1 -->
+        <div class="service-card">
+          <div class="service-header">
+            <div class="service-icon">🔍</div>
+            <div class="service-number">01</div>
+          </div>
+          <h3 class="service-title">Property Search</h3>
+          <p class="service-description">
+            Lorem ipsum dolor sit amet consectetur adipiscing elit sed eiusmod
+            tempor incididunt labore dolore magna
+          </p>
+          <ul class="feature-list">
+            <li>Advanced Search Filters</li>
+            <li>360° Virtual Tours</li>
+            <li>Real-time Updates</li>
+          </ul>
+          <a href="#" class="service-btn">
+            Explore Properties
+            <span class="btn-arrow">→</span>
+          </a>
         </div>
-        <div class="services-grid">
-            <!-- Service 1 -->
-            <div class="service-card">
-                <div class="service-header">
-                    <div class="service-icon">🔍</div>
-                    <div class="service-number">01</div>
-                </div>
-                <h3 class="service-title">Property Search</h3>
-                <p class="service-description">Lorem ipsum dolor sit amet consectetur adipiscing elit sed eiusmod tempor
-                    incididunt labore dolore magna</p>
-                <ul class="feature-list">
-                    <li>Advanced Search Filters</li>
-                    <li>360° Virtual Tours</li>
-                    <li>Real-time Updates</li>
-                </ul>
-                <a href="#" class="service-btn">
-                    Explore Properties
-                    <span class="btn-arrow">→</span>
-                </a>
-            </div>
-            <!-- Service 2 - Featured -->
-            <div class="service-card featured">
-                <div class="service-header">
-                    <div class="service-icon">📈</div>
-                    <div class="service-number">02</div>
-                </div>
-                <h3 class="service-title">Market Analysis</h3>
-                <p class="service-description">Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip commodo consequat duis aute</p>
-                <ul class="feature-list">
-                    <li>Price Trend Reports</li>
-                    <li>Investment Insights</li>
-                    <li>Market Forecasting</li>
-                </ul>
-                <a href="#" class="service-btn">
-                    Get Analysis
-                    <span class="btn-arrow">→</span>
-                </a>
-            </div>
-            <!-- Service 3 -->
-            <div class="service-card">
-                <div class="service-header">
-                    <div class="service-icon">🏠</div>
-                    <div class="service-number">03</div>
-                </div>
-                <h3 class="service-title">Property Management</h3>
-                <p class="service-description">Excepteur sint occaecat cupidatat non proident sunt culpa qui officia
-                    deserunt mollit anim laborum sed</p>
-                <ul class="feature-list">
-                    <li>Tenant Screening</li>
-                    <li>Rental Collection</li>
-                    <li>Maintenance Services</li>
-                </ul>
-                <a href="#" class="service-btn">
-                    Manage Now
-                    <span class="btn-arrow">→</span>
-                </a>
-            </div>
-            <!-- Service 4 -->
-            <div class="service-card">
-                <div class="service-header">
-                    <div class="service-icon">🛡️</div>
-                    <div class="service-number">04</div>
-                </div>
-                <h3 class="service-title">Legal Support</h3>
-                <p class="service-description">Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium
-                    doloremque laudantium totam rem aperiam</p>
-                <ul class="feature-list">
-                    <li>Contract Review</li>
-                    <li>Title Verification</li>
-                    <li>Legal Documentation</li>
-                </ul>
-                <a href="#" class="service-btn">
-                    Learn More
-                    <span class="btn-arrow">→</span>
-                </a>
-            </div>
+        <!-- Service 2 - Featured -->
+        <div class="service-card featured">
+          <div class="service-header">
+            <div class="service-icon">📈</div>
+            <div class="service-number">02</div>
+          </div>
+          <h3 class="service-title">Market Analysis</h3>
+          <p class="service-description">
+            Ut enim ad minim veniam quis nostrud exercitation ullamco laboris
+            nisi ut aliquip commodo consequat duis aute
+          </p>
+          <ul class="feature-list">
+            <li>Price Trend Reports</li>
+            <li>Investment Insights</li>
+            <li>Market Forecasting</li>
+          </ul>
+          <a href="#" class="service-btn">
+            Get Analysis
+            <span class="btn-arrow">→</span>
+          </a>
         </div>
-        <div class="discover-btn">
-            <a href="#" class="discover-more">
-                Discover more
-                <span class="discover-arrow">→</span>
-            </a>
+        <!-- Service 3 -->
+        <div class="service-card">
+          <div class="service-header">
+            <div class="service-icon">🏠</div>
+            <div class="service-number">03</div>
+          </div>
+          <h3 class="service-title">Property Management</h3>
+          <p class="service-description">
+            Excepteur sint occaecat cupidatat non proident sunt culpa qui
+            officia deserunt mollit anim laborum sed
+          </p>
+          <ul class="feature-list">
+            <li>Tenant Screening</li>
+            <li>Rental Collection</li>
+            <li>Maintenance Services</li>
+          </ul>
+          <a href="#" class="service-btn">
+            Manage Now
+            <span class="btn-arrow">→</span>
+          </a>
         </div>
+        <!-- Service 4 -->
+        <div class="service-card">
+          <div class="service-header">
+            <div class="service-icon">🛡️</div>
+            <div class="service-number">04</div>
+          </div>
+          <h3 class="service-title">Legal Support</h3>
+          <p class="service-description">
+            Sed ut perspiciatis unde omnis iste natus error voluptatem
+            accusantium doloremque laudantium totam rem aperiam
+          </p>
+          <ul class="feature-list">
+            <li>Contract Review</li>
+            <li>Title Verification</li>
+            <li>Legal Documentation</li>
+          </ul>
+          <a href="#" class="service-btn">
+            Learn More
+            <span class="btn-arrow">→</span>
+          </a>
+        </div>
+      </div>
+      <div class="discover-btn">
+        <a href="#" class="discover-more">
+          Discover more
+          <span class="discover-arrow">→</span>
+        </a>
+      </div>
     </div>
     <!-- agents section  -->
     <div class="container">
-        <div class="section-header">
-            <h2>Featured Agents</h2>
-            <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-        </div>
-        <div class="agents-grid">
-            <!-- Agent 1 -->
-            <div class="agent-card">
-                <div class="agent-image-container">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4rARqJGUH-l5hVvKfS_w_2BxBIoatLWoKlg&s"
-                        alt="Lisa Thompson" class="agent-image">
-                    <div class="agent-badge badge-top">TOP AGENT</div>
-                    <div class="contact-overlay">
-                        <a href="tel:+1234567890" class="contact-btn" title="Phone Agent">📞</a>
-                        <a href="mailto:lisa@example.com" class="contact-btn" title="Email Agent">✉️</a>
-                        <a href="https://wa.me/1234567890" class="contact-btn" title="WhatsApp Agent">💬</a>
-                    </div>
-                </div>
-                <div class="agent-info">
-                    <h3 class="agent-name">Lisa Thompson</h3>
-                    <p class="agent-title">Luxury Property Expert</p>
-                    <div class="agent-stats">
-                        <div class="stat-item">
-                            <span class="stat-number">150+</span>
-                            <span class="stat-label">Properties Sold</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">4.9</span>
-                            <span class="stat-label">Rating</span>
-                        </div>
-                    </div>
-                    <div class="agent-location">
-                        <span>📍</span>
-                        <span>Miami Beach</span>
-                    </div>
-                    <div class="agent-tags">
-                        <span class="tag">WATERFRONT</span>
-                        <span class="tag">HIGH-RISE</span>
-                    </div>
-                    <a href="#" class="view-profile-btn">View Profile</a>
-                </div>
+      <div class="section-header">
+        <h2>Featured Agents</h2>
+        <p>
+          Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
+          consectetur velit
+        </p>
+      </div>
+      <div class="agents-grid">
+        <!-- Agent 1 -->
+        <div class="agent-card">
+          <div class="agent-image-container">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4rARqJGUH-l5hVvKfS_w_2BxBIoatLWoKlg&s"
+              alt="Lisa Thompson"
+              class="agent-image"
+            />
+            <div class="agent-badge badge-top">TOP AGENT</div>
+            <div class="contact-overlay">
+              <a href="tel:+1234567890" class="contact-btn" title="Phone Agent"
+                >📞</a
+              >
+              <a
+                href="mailto:lisa@example.com"
+                class="contact-btn"
+                title="Email Agent"
+                >✉️</a
+              >
+              <a
+                href="https://wa.me/1234567890"
+                class="contact-btn"
+                title="WhatsApp Agent"
+                >💬</a
+              >
             </div>
-            <!-- Agent 2 -->
-            <div class="agent-card">
-                <div class="agent-image-container">
-                    <img src="https://res.cloudinary.com/jerrick/image/upload/d_642250b563292b35f27461a7.png,f_jpg,q_auto,w_720/614209d16c412c002062098e.png"
-                        alt="Robert Chen" class="agent-image">
-                    <div class="agent-badge badge-certified">CERTIFIED</div>
-                    <div class="contact-overlay">
-                        <a href="tel:+1234567891" class="contact-btn" title="Phone Agent">📞</a>
-                        <a href="mailto:robert@example.com" class="contact-btn" title="Email Agent">✉️</a>
-                        <a href="https://wa.me/1234567891" class="contact-btn" title="WhatsApp Agent">💬</a>
-                    </div>
-                </div>
-                <div class="agent-info">
-                    <h3 class="agent-name">Robert Chen</h3>
-                    <p class="agent-title">Commercial Specialist</p>
-                    <div class="agent-stats">
-                        <div class="stat-item">
-                            <span class="stat-number">90+</span>
-                            <span class="stat-label">Commercial Sales</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">4.8</span>
-                            <span class="stat-label">Rating</span>
-                        </div>
-                    </div>
-                    <div class="agent-location">
-                        <span>📍</span>
-                        <span>Downtown</span>
-                    </div>
-                    <div class="agent-tags">
-                        <span class="tag">OFFICE SPACE</span>
-                        <span class="tag">RETAIL</span>
-                    </div>
-                    <a href="#" class="view-profile-btn">View Profile</a>
-                </div>
+          </div>
+          <div class="agent-info">
+            <h3 class="agent-name">Lisa Thompson</h3>
+            <p class="agent-title">Luxury Property Expert</p>
+            <div class="agent-stats">
+              <div class="stat-item">
+                <span class="stat-number">150+</span>
+                <span class="stat-label">Properties Sold</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">4.9</span>
+                <span class="stat-label">Rating</span>
+              </div>
             </div>
-            <!-- Agent 3 -->
-            <div class="agent-card">
-                <div class="agent-image-container">
-                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=280&fit=crop&crop=face"
-                        alt="Maria Gonzalez" class="agent-image">
-                    <div class="agent-badge badge-rising">RISING STAR</div>
-                    <div class="contact-overlay"> <a href="tel:+923096527842" class="contact-btn"
-                            title="Phone Agent">📞</a> <a href="mailto:abid6527842@gmail.com" class="contact-btn"
-                            title="Email Agent">✉️</a> <a href="https://wa.me/923096527842" class="contact-btn"
-                            title="WhatsApp Agent">💬</a> </div>
-                </div>
-                <div class="agent-info">
-                    <h3 class="agent-name">Maria Gonzalez</h3>
-                    <p class="agent-title">Residential Advisor</p>
-                    <div class="agent-stats">
-                        <div class="stat-item">
-                            <span class="stat-number">75+</span>
-                            <span class="stat-label">Happy Families</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">4.9</span>
-                            <span class="stat-label">Rating</span>
-                        </div>
-                    </div>
-                    <div class="agent-location">
-                        <span>📍</span>
-                        <span>Suburbs</span>
-                    </div>
-                    <div class="agent-tags">
-                        <span class="tag">FAMILY HOMES</span>
-                        <span class="tag">FIRST-TIME</span>
-                    </div>
-                    <a href="#" class="view-profile-btn">View Profile</a>
-                </div>
+            <div class="agent-location">
+              <span>📍</span>
+              <span>Miami Beach</span>
             </div>
+            <div class="agent-tags">
+              <span class="tag">WATERFRONT</span>
+              <span class="tag">HIGH-RISE</span>
+            </div>
+            <a href="#" class="view-profile-btn">View Profile</a>
+          </div>
         </div>
-        <div class="explore-btn">
-            <a href="#" class="explore-all">
-                Explore All our Agents
-                <span class="explore-arrow">→</span>
-            </a>
+        <!-- Agent 2 -->
+        <div class="agent-card">
+          <div class="agent-image-container">
+            <img
+              src="https://res.cloudinary.com/jerrick/image/upload/d_642250b563292b35f27461a7.png,f_jpg,q_auto,w_720/614209d16c412c002062098e.png"
+              alt="Robert Chen"
+              class="agent-image"
+            />
+            <div class="agent-badge badge-certified">CERTIFIED</div>
+            <div class="contact-overlay">
+              <a href="tel:+1234567891" class="contact-btn" title="Phone Agent"
+                >📞</a
+              >
+              <a
+                href="mailto:robert@example.com"
+                class="contact-btn"
+                title="Email Agent"
+                >✉️</a
+              >
+              <a
+                href="https://wa.me/1234567891"
+                class="contact-btn"
+                title="WhatsApp Agent"
+                >💬</a
+              >
+            </div>
+          </div>
+          <div class="agent-info">
+            <h3 class="agent-name">Robert Chen</h3>
+            <p class="agent-title">Commercial Specialist</p>
+            <div class="agent-stats">
+              <div class="stat-item">
+                <span class="stat-number">90+</span>
+                <span class="stat-label">Commercial Sales</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">4.8</span>
+                <span class="stat-label">Rating</span>
+              </div>
+            </div>
+            <div class="agent-location">
+              <span>📍</span>
+              <span>Downtown</span>
+            </div>
+            <div class="agent-tags">
+              <span class="tag">OFFICE SPACE</span>
+              <span class="tag">RETAIL</span>
+            </div>
+            <a href="#" class="view-profile-btn">View Profile</a>
+          </div>
         </div>
+        <!-- Agent 3 -->
+        <div class="agent-card">
+          <div class="agent-image-container">
+            <img
+              src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=280&fit=crop&crop=face"
+              alt="Maria Gonzalez"
+              class="agent-image"
+            />
+            <div class="agent-badge badge-rising">RISING STAR</div>
+            <div class="contact-overlay">
+              <a
+                href="tel:+923096527842"
+                class="contact-btn"
+                title="Phone Agent"
+                >📞</a
+              >
+              <a
+                href="mailto:abid6527842@gmail.com"
+                class="contact-btn"
+                title="Email Agent"
+                >✉️</a
+              >
+              <a
+                href="https://wa.me/923096527842"
+                class="contact-btn"
+                title="WhatsApp Agent"
+                >💬</a
+              >
+            </div>
+          </div>
+          <div class="agent-info">
+            <h3 class="agent-name">Maria Gonzalez</h3>
+            <p class="agent-title">Residential Advisor</p>
+            <div class="agent-stats">
+              <div class="stat-item">
+                <span class="stat-number">75+</span>
+                <span class="stat-label">Happy Families</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">4.9</span>
+                <span class="stat-label">Rating</span>
+              </div>
+            </div>
+            <div class="agent-location">
+              <span>📍</span>
+              <span>Suburbs</span>
+            </div>
+            <div class="agent-tags">
+              <span class="tag">FAMILY HOMES</span>
+              <span class="tag">FIRST-TIME</span>
+            </div>
+            <a href="#" class="view-profile-btn">View Profile</a>
+          </div>
+        </div>
+      </div>
+      <div class="explore-btn">
+        <a href="#" class="explore-all">
+          Explore All our Agents
+          <span class="explore-arrow">→</span>
+        </a>
+      </div>
     </div>
     <!-- testimonial section  -->
     <section class="testimonials-section">
-        <div class="testimonials-header">
-            <h2>Testimonials</h2>
-            <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-        </div>
-        <!-- Hidden radio buttons for navigation -->
-        <input type="radio" name="testimonial" id="slide1" checked>
-        <input type="radio" name="testimonial" id="slide2">
-        <input type="radio" name="testimonial" id="slide3">
-        <input type="radio" name="testimonial" id="slide4">
-        <div class="testimonial-slider">
-            <div class="testimonial-track">
-                <!-- Testimonial 1 -->
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <h3>Labore nostrum eos impedit</h3>
-                        <div class="testimonial-text">
-                            Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim
-                            velit minim
-                            dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                            <br><br>
-                            Itaque ut explicabo vero occaecati est quam rerum sed. Numquam tempora aut aut quaerat quia
-                            illum. Nobis
-                            quia autem odit ipsam numquam. Doloribus sit sint corporis eius totam fuga.
-                        </div>
-                        <div class="author-info">
-                            <img src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/person/person-m-9.webp"
-                                alt="Matt Brandon" class="author-avatar">
-                            <div class="author-details">
-                                <h4>Matt Brandon</h4>
-                                <p>Freelancer</p>
-                            </div>
-                        </div>
-                    </div>
-                    <img src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/person/person-m-9.webp"
-                        alt="Matt Brandon - Client" class="testimonial-image">
+      <div class="testimonials-header">
+        <h2>Testimonials</h2>
+        <p>
+          Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
+          consectetur velit
+        </p>
+      </div>
+      <!-- Hidden radio buttons for navigation -->
+      <input type="radio" name="testimonial" id="slide1" checked />
+      <input type="radio" name="testimonial" id="slide2" />
+      <input type="radio" name="testimonial" id="slide3" />
+      <input type="radio" name="testimonial" id="slide4" />
+      <div class="testimonial-slider">
+        <div class="testimonial-track">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <h3>Labore nostrum eos impedit</h3>
+              <div class="testimonial-text">
+                Fugiat enim eram quae cillum dolore dolor amet nulla culpa
+                multos export minim fugiat minim velit minim dolor enim duis
+                veniam ipsum anim magna sunt elit fore quem dolore labore illum
+                veniam.
+                <br /><br />
+                Itaque ut explicabo vero occaecati est quam rerum sed. Numquam
+                tempora aut aut quaerat quia illum. Nobis quia autem odit ipsam
+                numquam. Doloribus sit sint corporis eius totam fuga.
+              </div>
+              <div class="author-info">
+                <img
+                  src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/person/person-m-9.webp"
+                  alt="Matt Brandon"
+                  class="author-avatar"
+                />
+                <div class="author-details">
+                  <h4>Matt Brandon</h4>
+                  <p>Freelancer</p>
                 </div>
-                <!-- Testimonial 2 -->
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <h3>Exceptional Service Quality</h3>
-                        <div class="testimonial-text">
-                            Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus.
-                            Accusantium
-                            quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper ullamcorper.
-                            <br><br>
-                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                            laudantium. Totam
-                            rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.
-                        </div>
-                        <div class="author-info">
-                            <img src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/person/person-f-10.webp"
-                                alt="Jena Karlis" class="author-avatar">
-                            <div class="author-details">
-                                <h4>Jena Karlis</h4>
-                                <p>Business Owner</p>
-                            </div>
-                        </div>
-                    </div>
-                    <img src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/person/person-f-10.webp"
-                        alt="Jena Karlis - Client" class="testimonial-image">
+              </div>
+            </div>
+            <img
+              src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/person/person-m-9.webp"
+              alt="Matt Brandon - Client"
+              class="testimonial-image"
+            />
+          </div>
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <h3>Exceptional Service Quality</h3>
+              <div class="testimonial-text">
+                Proin iaculis purus consequat sem cure digni ssim donec
+                porttitora entum suscipit rhoncus. Accusantium quam, ultricies
+                eget id, aliquam eget nibh et. Maecen aliquam, risus at semper
+                ullamcorper.
+                <br /><br />
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                accusantium doloremque laudantium. Totam rem aperiam, eaque ipsa
+                quae ab illo inventore veritatis et quasi architecto beatae.
+              </div>
+              <div class="author-info">
+                <img
+                  src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/person/person-f-10.webp"
+                  alt="Jena Karlis"
+                  class="author-avatar"
+                />
+                <div class="author-details">
+                  <h4>Jena Karlis</h4>
+                  <p>Business Owner</p>
                 </div>
-                <!-- Testimonial 3 -->
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <h3>Outstanding Results</h3>
-                        <div class="testimonial-text">
-                            Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis
-                            minim tempor
-                            labore quem eram duis noster aute amet eram fore quis sint minim.
-                            <br><br>
-                            Tempor enim essent esse tenetur veniam labore esse eiusmod. Deserunt lorem enim magna sint
-                            dolore tempor
-                            sunt et dolore aute laboris lorem magna veniam quis nostrud.
-                        </div>
-                        <div class="author-info">
-                            <img src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/person/person-m-7.webp"
-                                alt="Soul Goodman" class="author-avatar">
-                            <div class="author-details">
-                                <h4>Soul Goodman</h4>
-                                <p>Marketing Director</p>
-                            </div>
-                        </div>
-                    </div>
-                    <img src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/person/person-m-7.webp"
-                        alt="Soul Goodman - Client" class="testimonial-image">
+              </div>
+            </div>
+            <img
+              src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/person/person-f-10.webp"
+              alt="Jena Karlis - Client"
+              class="testimonial-image"
+            />
+          </div>
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <h3>Outstanding Results</h3>
+              <div class="testimonial-text">
+                Enim nisi quem export duis labore cillum quae magna enim sint
+                quorum nulla quem veniam duis minim tempor labore quem eram duis
+                noster aute amet eram fore quis sint minim.
+                <br /><br />
+                Tempor enim essent esse tenetur veniam labore esse eiusmod.
+                Deserunt lorem enim magna sint dolore tempor sunt et dolore aute
+                laboris lorem magna veniam quis nostrud.
+              </div>
+              <div class="author-info">
+                <img
+                  src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/person/person-m-7.webp"
+                  alt="Soul Goodman"
+                  class="author-avatar"
+                />
+                <div class="author-details">
+                  <h4>Soul Goodman</h4>
+                  <p>Marketing Director</p>
                 </div>
-                <!-- Testimonial 4 -->
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <h3>Highly Recommended</h3>
-                        <div class="testimonial-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et
-                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-                            <br><br>
-                            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                            reprehenderit in
-                            voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint.
-                        </div>
-                        <div class="author-info">
-                            <img src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/person/person-f-8.webp"
-                                alt="Sara Wilsson - Client" class="author-avatar">
+              </div>
+            </div>
+            <img
+              src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/person/person-m-7.webp"
+              alt="Soul Goodman - Client"
+              class="testimonial-image"
+            />
+          </div>
+          <!-- Testimonial 4 -->
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <h3>Highly Recommended</h3>
+              <div class="testimonial-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation.
+                <br /><br />
+                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                aute irure dolor in reprehenderit in voluptate velit esse cillum
+                dolore eu fugiat nulla pariatur excepteur sint.
+              </div>
+              <div class="author-info">
+                <img
+                  src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/person/person-f-8.webp"
+                  alt="Sara Wilsson - Client"
+                  class="author-avatar"
+                />
 
-                            <div class="author-details">
-                                <h4>Sara Wilsson</h4>
-                                <p>Project Manager</p>
-                            </div>
-                        </div>
-                    </div>
-                    <img src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/person/person-f-8.webp"
-                        alt="Sara Wilsson - Client" class="testimonial-image">
+                <div class="author-details">
+                  <h4>Sara Wilsson</h4>
+                  <p>Project Manager</p>
                 </div>
+              </div>
             </div>
-            <div class="navigation">
-                <label for="slide4" class="nav-btn">&lt;</label>
-                <label for="slide2" class="nav-btn">&gt;</label>
-            </div>
+            <img
+              src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/person/person-f-8.webp"
+              alt="Sara Wilsson - Client"
+              class="testimonial-image"
+            />
+          </div>
         </div>
+        <div class="navigation">
+          <label for="slide4" class="nav-btn">&lt;</label>
+          <label for="slide2" class="nav-btn">&gt;</label>
+        </div>
+      </div>
     </section>
     <!-- why-us-section -->
     <div class="why-us-section">
-        <!-- Header -->
-        <div class="section-header">
-            <h1 class="section-title">Why Us</h1>
-            <p class="section-subtitle">Neque dolorem dolor consectetur or aliquip duis reprehenderit quam dolor magnam
-                aliquos tempora quasi consectetur.</p><br>
-            <div class="star-rating">★ Why Elite Properties</div>
-        </div>
-        <!-- Main Content -->
-        <div class="main-content">
-            <!-- Left Side -->
-            <div class="content-left">
-                <div class="video-container">
-                    <video class="coding_vlog" controls loop
-                        poster="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1000&q=80">
-                        <source src="coding_vlog.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="years-badge"><span class="years-number">15+</span>
-                        <div class="years-label">Years Excellence</div>
-                    </div>
-                    <div class="clients-badge"><span class="clients-number">3.2K</span>
-                        <div class="clients-label">Happy Clients</div>
-                    </div>
-                </div>
+      <!-- Header -->
+      <div class="section-header">
+        <h1 class="section-title">Why Us</h1>
+        <p class="section-subtitle">
+          Neque dolorem dolor consectetur or aliquip duis reprehenderit quam
+          dolor magnam aliquos tempora quasi consectetur.
+        </p>
+        <br />
+        <div class="star-rating">★ Why Elite Properties</div>
+      </div>
+      <!-- Main Content -->
+      <div class="main-content">
+        <!-- Left Side -->
+        <div class="content-left">
+          <div class="video-container">
+            <video
+              class="coding_vlog"
+              controls
+              loop
+              poster="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1000&q=80"
+            >
+              <source src="coding_vlog.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div class="years-badge">
+              <span class="years-number">15+</span>
+              <div class="years-label">Years Excellence</div>
             </div>
-            <!-- Right Side -->
-            <div class="content-right">
-                <h2>Your Gateway to Exceptional Real Estate Experiences</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua.</p>
-                <div class="features-grid">
-                    <div class="feature-item">
-                        <div class="feature-icon">🏠</div>
-                        <div class="feature-content">
-                            <h4>Prime Locations</h4>
-                            <p>Curated access to the most sought-after prime locations, meticulously selected for
-                                maximum investment potential.</p>
-                        </div>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">✔</div>
-                        <div class="feature-content">
-                            <h4>Guaranteed Results</h4>
-                            <p>Our track record speaks for itself with proven success stories and satisfied clients
-                                worldwide.</p>
-                        </div>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">⚡</div>
-                        <div class="feature-content">
-                            <h4>Fast Processing</h4>
-                            <p>Streamlined processes and rapid transactions to get you into your dream property without
-                                delay.</p>
-                        </div>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">👥</div>
-                        <div class="feature-content">
-                            <h4>Expert Team</h4>
-                            <p>Certified professionals with years of experience and dedication to excellence.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="stats-row">
-                    <div class="stat-badge"><span class="stat-number">94%</span>
-                        <div class="stat-label">Success Rate</div>
-                    </div>
-                    <div class="stat-badge"><span class="stat-number">1.8K</span>
-                        <div class="stat-label">Properties Sold</div>
-                    </div>
-                    <div class="stat-badge"><span class="stat-number">24/7</span>
-                        <div class="stat-label">Support</div>
-                    </div>
-                </div>
-                <div class="cta-buttons">
-                    <a href="#" class="btn btn-primary">Explore Properties</a>
-                    <a href="#" class="btn btn-outline">Schedule Consultation</a>
-                </div>
+            <div class="clients-badge">
+              <span class="clients-number">3.2K</span>
+              <div class="clients-label">Happy Clients</div>
             </div>
+          </div>
         </div>
+        <!-- Right Side -->
+        <div class="content-right">
+          <h2>Your Gateway to Exceptional Real Estate Experiences</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <div class="features-grid">
+            <div class="feature-item">
+              <div class="feature-icon">🏠</div>
+              <div class="feature-content">
+                <h4>Prime Locations</h4>
+                <p>
+                  Curated access to the most sought-after prime locations,
+                  meticulously selected for maximum investment potential.
+                </p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">✔</div>
+              <div class="feature-content">
+                <h4>Guaranteed Results</h4>
+                <p>
+                  Our track record speaks for itself with proven success stories
+                  and satisfied clients worldwide.
+                </p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">⚡</div>
+              <div class="feature-content">
+                <h4>Fast Processing</h4>
+                <p>
+                  Streamlined processes and rapid transactions to get you into
+                  your dream property without delay.
+                </p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">👥</div>
+              <div class="feature-content">
+                <h4>Expert Team</h4>
+                <p>
+                  Certified professionals with years of experience and
+                  dedication to excellence.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="stats-row">
+            <div class="stat-badge">
+              <span class="stat-number">94%</span>
+              <div class="stat-label">Success Rate</div>
+            </div>
+            <div class="stat-badge">
+              <span class="stat-number">1.8K</span>
+              <div class="stat-label">Properties Sold</div>
+            </div>
+            <div class="stat-badge">
+              <span class="stat-number">24/7</span>
+              <div class="stat-label">Support</div>
+            </div>
+          </div>
+          <div class="cta-buttons">
+            <a href="#" class="btn btn-primary">Explore Properties</a>
+            <a href="#" class="btn btn-outline">Schedule Consultation</a>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- blog-section  -->
     <div class="blog-section">
-        <h2 class="section-title">Recent Blog Posts</h2>
-        <p class="section-description">
-            Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit
-        </p>
-        <div class="blog-grid">
-            <article class="blog-card">
-                <div class="blog-image">
-                    <img src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/blog/blog-hero-2.webp"
-                        alt="Random Image">
-                    <div class="date-badge">December 12</div>
-                </div>
-                <div class="blog-content">
-                    <h3 class="blog-title">Eum ad dolor et. Autem aut fugiat debitis</h3>
-                    <a href="#" class="read-more">Read More</a>
-                </div>
-            </article>
-            <article class="blog-card">
-                <div class="blog-image">
-                    <img src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/person/person-f-8.webp"
-                        alt="Sara Wilsson">
-                    <div class="date-badge">July 17</div>
-                </div>
-                <div class="blog-content">
-                    <h3 class="blog-title">Et repellendus molestiae qui est sed omnis</h3>
-                    <a href="#" class="read-more">Read More</a>
-                </div>
-            </article>
-            <article class="blog-card">
-                <div class="blog-image">
-                    <img src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/real-estate/property-interior-10.webp"
-                        alt="Modern Interior">
-                    <div class="date-badge">September 05</div>
-                </div>
-                <div class="blog-content">
-                    <h3 class="blog-title">Quia assumenda est et veritati tirana ploder</h3>
-                    <a href="#" class="read-more">Read More</a>
-                </div>
-            </article>
-        </div>
+      <h2 class="section-title">Recent Blog Posts</h2>
+      <p class="section-description">
+        Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
+        consectetur velit
+      </p>
+      <div class="blog-grid">
+        <article class="blog-card">
+          <div class="blog-image">
+            <img
+              src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/blog/blog-hero-2.webp"
+              alt="Random Image"
+            />
+            <div class="date-badge">December 12</div>
+          </div>
+          <div class="blog-content">
+            <h3 class="blog-title">
+              Eum ad dolor et. Autem aut fugiat debitis
+            </h3>
+            <a href="#" class="read-more">Read More</a>
+          </div>
+        </article>
+        <article class="blog-card">
+          <div class="blog-image">
+            <img
+              src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/person/person-f-8.webp"
+              alt="Sara Wilsson"
+            />
+            <div class="date-badge">July 17</div>
+          </div>
+          <div class="blog-content">
+            <h3 class="blog-title">
+              Et repellendus molestiae qui est sed omnis
+            </h3>
+            <a href="#" class="read-more">Read More</a>
+          </div>
+        </article>
+        <article class="blog-card">
+          <div class="blog-image">
+            <img
+              src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/real-estate/property-interior-10.webp"
+              alt="Modern Interior"
+            />
+            <div class="date-badge">September 05</div>
+          </div>
+          <div class="blog-content">
+            <h3 class="blog-title">
+              Quia assumenda est et veritati tirana ploder
+            </h3>
+            <a href="#" class="read-more">Read More</a>
+          </div>
+        </article>
+      </div>
     </div>
     <!-- section more-pages -->
     <div class="container">
-        <div class="content-wrapper">
-            <div class="left-content">
-                <div class="badge">Your Property Journey Starts Here</div>
-                <h1 class="main-title">Ready to Find Your Perfect Investment?</h1>
-                <p class="description">
-                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris
-                    viverra veniam sit amet lacus cursus. Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem.
-                </p>
-                <div class="features">
-                    <div class="feature-item">
-                        <div class="feature-icon"></div>
-                        Expert market analysis and insights
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon"></div>
-                        Personalized property recommendations
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon"></div>
-                        End-to-end transaction support
-                    </div>
-                </div>
-                <div class="buttons">
-                    <button class="btn-primary">Get Free Consultation</button>
-                    <a href="tel:555-123-4567" class="btn-secondary">Call (555) 123-4567</a>
-                </div>
+      <div class="content-wrapper">
+        <div class="left-content">
+          <div class="badge">Your Property Journey Starts Here</div>
+          <h1 class="main-title">Ready to Find Your Perfect Investment?</h1>
+          <p class="description">
+            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia curae; Mauris viverra veniam sit amet lacus cursus.
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem.
+          </p>
+          <div class="features">
+            <div class="feature-item">
+              <div class="feature-icon"></div>
+              Expert market analysis and insights
             </div>
-            <div class="right-content">
-                <div class="image-container">
-                    <img src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/real-estate/property-exterior-5.webp"
-                        alt="Beautiful House" class="house-image">
-                    <div class="statts-overlay">
-                        <span class="star">⭐</span>
-                        <span class="statts-text">Trusted by 500+ Clients</span>
-                    </div>
-                    <div class="statts-cards">
-                        <div class="statt-card">
-                            <div class="statt-number">
-                                <span class="statt-icon">🏠</span>
-                                850+
-                            </div>
-                            <div class="statt-label">Properties Sold</div>
-                        </div>
-                        <div class="statt-card">
-                            <div class="statt-number">
-                                <span class="statt-icon">🏆</span>
-                                15
-                            </div>
-                            <div class="statt-label">Years Experience</div>
-                        </div>
-                    </div>
-                </div>
+            <div class="feature-item">
+              <div class="feature-icon"></div>
+              Personalized property recommendations
             </div>
+            <div class="feature-item">
+              <div class="feature-icon"></div>
+              End-to-end transaction support
+            </div>
+          </div>
+          <div class="buttons">
+            <button class="btn-primary">Get Free Consultation</button>
+            <a href="tel:555-123-4567" class="btn-secondary"
+              >Call (555) 123-4567</a
+            >
+          </div>
         </div>
+        <div class="right-content">
+          <div class="image-container">
+            <img
+              src="https://bootstrapmade.com/content/demo/TheProperty/assets/img/real-estate/property-exterior-5.webp"
+              alt="Beautiful House"
+              class="house-image"
+            />
+            <div class="statts-overlay">
+              <span class="star">⭐</span>
+              <span class="statts-text">Trusted by 500+ Clients</span>
+            </div>
+            <div class="statts-cards">
+              <div class="statt-card">
+                <div class="statt-number">
+                  <span class="statt-icon">🏠</span>
+                  850+
+                </div>
+                <div class="statt-label">Properties Sold</div>
+              </div>
+              <div class="statt-card">
+                <div class="statt-number">
+                  <span class="statt-icon">🏆</span>
+                  15
+                </div>
+                <div class="statt-label">Years Experience</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- footer section  -->
     <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <!-- Company Info -->
+          <div class="footer-section">
+            <h2>TheProperty</h2>
+            <p class="footer-description">
+              Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+              posuere cubilia curae. Donec velit neque auctor sit amet aliquam
+              vel ullamcorper sit amet ligula.
+            </p>
+            <div class="newsletter">
+              <h4>Stay Updated</h4>
+              <form class="newsletter-form">
+                <input
+                  type="email"
+                  class="newsletter-input"
+                  placeholder="Enter your email"
+                  required
+                />
+                <button type="submit" class="newsletter-btn">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+                  </svg>
+                </button>
+              </form>
+            </div>
+          </div>
+          <!-- Company Links -->
+          <div class="footer-section">
+            <h3>Company</h3>
+            <ul class="footer-links">
+              <li><a href="#about">About</a></li>
+              <li><a href="#careers">Careers</a></li>
+              <li><a href="#press">Press</a></li>
+              <li><a href="#blog">Blog</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <!-- Solutions Links -->
+          <div class="footer-section">
+            <h3>Solutions</h3>
+            <ul class="footer-links">
+              <li><a href="#digital-strategy">Digital Strategy</a></li>
+              <li><a href="#cloud-computing">Cloud Computing</a></li>
+              <li><a href="#data-analytics">Data Analytics</a></li>
+              <li><a href="#ai-solutions">AI Solutions</a></li>
+              <li><a href="#cybersecurity">Cybersecurity</a></li>
+            </ul>
+          </div>
+          <!-- Contact Info -->
+          <div class="footer-section">
+            <h3>Get in Touch</h3>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                  />
+                </svg>
+              </div>
+              <div class="contact-text">
+                2847 Maple Avenue<br />
+                Los Angeles, CA 90210<br />
+                United States
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+                  />
+                </svg>
+              </div>
+              <div class="contact-text">+1 (555) 987-6543</div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                  />
+                </svg>
+              </div>
+              <div class="contact-text">contact@example.com</div>
+            </div>
+            <!-- Social Media Icons -->
+            <div class="social-icons">
+              <a href="#" class="social-icon" title="Facebook">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="social-icon" title="Twitter">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="social-icon" title="LinkedIn">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="social-icon" title="YouTube">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="social-icon" title="GitHub">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
         <div class="container">
-            <div class="footer-content">
-                <!-- Company Info -->
-                <div class="footer-section">
-                    <h2>TheProperty</h2>
-                    <p class="footer-description">
-                        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae. Donec
-                        velit neque auctor sit amet aliquam vel ullamcorper sit amet ligula.
-                    </p>
-                    <div class="newsletter">
-                        <h4>Stay Updated</h4>
-                        <form class="newsletter-form">
-                            <input type="email" class="newsletter-input" placeholder="Enter your email" required>
-                            <button type="submit" class="newsletter-btn">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
-                                </svg>
-                            </button>
-                        </form>
-                    </div>
-                </div>
-                <!-- Company Links -->
-                <div class="footer-section">
-                    <h3>Company</h3>
-                    <ul class="footer-links">
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#careers">Careers</a></li>
-                        <li><a href="#press">Press</a></li>
-                        <li><a href="#blog">Blog</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <!-- Solutions Links -->
-                <div class="footer-section">
-                    <h3>Solutions</h3>
-                    <ul class="footer-links">
-                        <li><a href="#digital-strategy">Digital Strategy</a></li>
-                        <li><a href="#cloud-computing">Cloud Computing</a></li>
-                        <li><a href="#data-analytics">Data Analytics</a></li>
-                        <li><a href="#ai-solutions">AI Solutions</a></li>
-                        <li><a href="#cybersecurity">Cybersecurity</a></li>
-                    </ul>
-                </div>
-                <!-- Contact Info -->
-                <div class="footer-section">
-                    <h3>Get in Touch</h3>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-                            </svg>
-                        </div>
-                        <div class="contact-text">
-                            2847 Maple Avenue<br>
-                            Los Angeles, CA 90210<br>
-                            United States
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
-                            </svg>
-                        </div>
-                        <div class="contact-text">
-                            +1 (555) 987-6543
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-                            </svg>
-                        </div>
-                        <div class="contact-text">
-                            contact@example.com
-                        </div>
-                    </div>
-                    <!-- Social Media Icons -->
-                    <div class="social-icons">
-                        <a href="#" class="social-icon" title="Facebook">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-                            </svg>
-                        </a>
-                        <a href="#" class="social-icon" title="Twitter">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
-                            </svg>
-                        </a>
-                        <a href="#" class="social-icon" title="LinkedIn">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                            </svg>
-                        </a>
-                        <a href="#" class="social-icon" title="YouTube">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-                            </svg>
-                        </a>
-                        <a href="#" class="social-icon" title="GitHub">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
+          <div class="footer-bottom-content">
+            <div class="copyright">
+              © Copyright MyWebsite. All Rights Reserved
             </div>
-        </div>
-        <!-- Footer Bottom -->
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="footer-bottom-content">
-                    <div class="copyright">
-                        © Copyright MyWebsite. All Rights Reserved
-                    </div>
-                    <div class="footer-bottom-links">
-                        <a href="#privacy">Privacy Policy</a>
-                        <a href="#terms">Terms of Service</a>
-                        <a href="#cookies">Cookie Policy</a>
-                    </div>
-                    <div class="designed-by">
-                        Designed by BootstrapMade
-                    </div>
-                </div>
+            <div class="footer-bottom-links">
+              <a href="#privacy">Privacy Policy</a>
+              <a href="#terms">Terms of Service</a>
+              <a href="#cookies">Cookie Policy</a>
             </div>
+            <div class="designed-by">Designed by BootstrapMade</div>
+          </div>
         </div>
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>
